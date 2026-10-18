@@ -1,0 +1,335 @@
+{
+  "name": "Tamerlan Amirchanov",
+  "email": "t.amirchanova@gmail.com",
+  "availability": "ab sofort",
+  "updated": "2026-10-18",
+  "content": {
+    "eyebrow": "TECHNIK · PROZESSE · AUTOMATISIERUNG",
+    "headline": [
+      "Technik verstehen.",
+      "Abläufe verbessern.",
+      "Mit KI weiterdenken."
+    ],
+    "intro": "Aufwand reduzieren und Probleme lösen – durch KI-Automatisierung. Meine Stärken: Prozessoptimierung, klare Dokumentation und Weiterbildung von Mitarbeitenden – auch in internationalen Teams.",
+    "availability": "Offen für neue Aufgaben",
+    "today_title": "Probleme lösen.\nVerbesserungen umsetzen.",
+    "today_text": [
+      "Ich erkenne Verbesserungspotenziale und mache Wissen im Team nutzbar. Lassen Sie uns gemeinsam KI-Lösungen im Unternehmen aufbauen und kontinuierlich verbessern."
+    ],
+    "strengths": [
+      {
+        "title": "Prozesse verbessern.",
+        "text": "Schwachstellen analysieren, Lösungen ausarbeiten und die Umsetzung im Team abstimmen.",
+        "group": "prozesse"
+      },
+      {
+        "title": "Wissen weitergeben.",
+        "text": "Mitarbeitende einarbeiten und schulen, technische Abläufe und Handbücher verständlich machen.",
+        "group": "technik"
+      },
+      {
+        "title": "KI im Unternehmen aufbauen.",
+        "text": "Eigene Konzepte entwickeln, Abläufe automatisieren und Lösungen verbessern.",
+        "group": "ki"
+      }
+    ],
+    "contact_title": "Eine gute Aufgabe\nbeginnt mit einem Gespräch.",
+    "contact_text": "Lassen Sie uns gemeinsam Probleme lösen und Prozesse verbessern – mit meiner Erfahrung in KI-Automatisierung.",
+    "meta_description": "Tamerlan Amirchanov – Aufwand durch KI-Automatisierung reduzieren, Anlagen und Prozesse optimieren, Mitarbeitende weiterbilden. Persönlicher Online-Lebenslauf.",
+    "highlights": {
+      "experience": {
+        "label": "Jahre in der Prozessoptimierung",
+        "note": "inklusive Werkstudentenzeit",
+        "bullets": [
+          "Technische Dokumentation & Prozessoptimierung",
+          "Einarbeitung & Weiterbildung von Mitarbeitenden"
+        ]
+      },
+      "ai": {
+        "label": "KI-Weiterbildung",
+        "note": "KI-Agenten · Workflows · APIs · RAG",
+        "bullets": [
+          "Eigene KI-Lösungen konzipieren & aufbauen",
+          "Systematisch testen & weiterentwickeln"
+        ]
+      },
+      "international": {
+        "suffix": " Länder",
+        "label": "Internationale Zusammenarbeit",
+        "bullets": [
+          "Vor Ort in der DACH-Region",
+          "Remote-Zusammenarbeit auf Englisch"
+        ],
+        "note": "DACH-Region, UK, Japan & Indien"
+      }
+    },
+    "poster_title": "Zusammen\nein Team"
+  },
+  "metrics": [
+    {
+      "value": 5,
+      "suffix": "+",
+      "label": "Jahre in der Prozessoptimierung",
+      "note": "inklusive Werkstudentenzeit",
+      "bullets": [
+        "Technische Dokumentation & Prozessoptimierung",
+        "Einarbeitung & Weiterbildung von Mitarbeitenden"
+      ]
+    },
+    {
+      "value": 500,
+      "suffix": " UE",
+      "label": "KI-Weiterbildung",
+      "note": "KI-Agenten · Workflows · APIs · RAG",
+      "bullets": [
+        "Eigene KI-Lösungen konzipieren & aufbauen",
+        "Systematisch testen & weiterentwickeln"
+      ]
+    },
+    {
+      "value": 6,
+      "suffix": " Länder",
+      "label": "Internationale Zusammenarbeit",
+      "bullets": [
+        "Vor Ort in der DACH-Region",
+        "Remote-Zusammenarbeit auf Englisch"
+      ],
+      "note": "DACH-Region, UK, Japan & Indien"
+    }
+  ],
+  "timeline": [
+    {
+      "start": "2026-08",
+      "end": "2026-10",
+      "organization": "Syntax Institut",
+      "title": "Weiterbildung Künstliche Intelligenz",
+      "role": "Modul 4 · KI-Agenten & Workflows",
+      "text": "500 Unterrichtseinheiten.",
+      "bullets": [
+        "KI-Agenten und automatisierte Unternehmensprozesse",
+        "APIs, Datentransformation und RAG",
+        "Systematisches Testen, Monitoring und zuverlässiger Betrieb"
+      ],
+      "room_bullets": [
+        "KI-Agenten & Unternehmensprozesse",
+        "APIs, Daten & RAG",
+        "Testing & Monitoring"
+      ]
+    },
+    {
+      "start": "2021-01",
+      "end": "2026-07",
+      "organization": "WegscheidEntrenco GmbH",
+      "title": "Anlagenbetrieb aus der Ferne",
+      "role": "Support & Technische Dokumentation",
+      "text": "Systemoptimierung, technischer Support und Wissenstransfer im internationalen Anlagenbetrieb.",
+      "bullets": [
+        "Prozessoptimierung und Datenauswertung",
+        "Technische Dokumentation erstellt und gepflegt",
+        "Mitarbeitende eingearbeitet & Team weitergebildet"
+      ],
+      "room_bullets": [
+        "Prozessoptimierung und Datenauswertung",
+        "Technische Dokumentation erstellt und gepflegt",
+        "Mitarbeitende eingearbeitet & Team weitergebildet"
+      ]
+    },
+    {
+      "start": "2019-02",
+      "end": "2020-01",
+      "organization": "Salzgitter Flachstahl GmbH",
+      "title": "Daten und Materialflüsse",
+      "role": "Ersatzteilmanagement / Reserveteilwirtschaft",
+      "text": "Logistische Daten ausgewertet und Prozessketten modelliert.",
+      "bullets": [
+        "Schwachstellen in der Reserveteilwirtschaft analysiert",
+        "SAP für Bestände, Materialfluss und Aufträge eingesetzt"
+      ],
+      "room_bullets": [
+        "Logistische Daten ausgewertet",
+        "Prozessketten modelliert",
+        "SAP in der Reserveteilwirtschaft eingesetzt"
+      ]
+    },
+    {
+      "start": "2015-09",
+      "end": "2019-12",
+      "organization": "Ostfalia Hochschule für angewandte Wissenschaften",
+      "title": "B.Sc. Logistik- und Informationsmanagement",
+      "role": "Ressourcenmanagement · Anwendungssysteme",
+      "text": "Logistische Prozesse und Informationsmanagement.",
+      "room_text": "Bachelorarbeit mit Kolloquium: Note 1,0. Analyse der Warenwirtschaft bei der Salzgitter Flachstahl GmbH.",
+      "bullets": [
+        "Schwerpunkte: Ressourcenmanagement & betriebswirtschaftliche Anwendungssysteme",
+        "Bachelorarbeit mit Kolloquium: Note 1,0 – Analyse der Warenwirtschaft bei der Salzgitter Flachstahl GmbH"
+      ]
+    },
+    {
+      "start": "2014-12",
+      "end": "2018-02",
+      "organization": "LKY Wartungs- und Industrieservice GmbH",
+      "title": "Die Abläufe von Grund auf",
+      "role": "Lagerwirtschaft",
+      "text": "Praktische Logistikerfahrung im Lagerbetrieb.",
+      "bullets": [
+        "Wareneingang geprüft und Aufträge kommissioniert",
+        "Lagerplätze und Abläufe gemeinsam im Team optimiert"
+      ],
+      "room_bullets": [
+        "Wareneingang geprüft & kommissioniert",
+        "Lagerplätze & Abläufe im Team optimiert"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "title": "Technik, Anlagenbetrieb & Projektmanagement",
+      "title_lines": [
+        "Technik, Anlagenbetrieb",
+        "& Projektmanagement"
+      ],
+      "room_title": "Technik & Projekte",
+      "items": [
+        "Remote Monitoring",
+        "Störungsanalyse",
+        "BHKW Leistungsoptimierung",
+        "Inbetriebnahme-Unterstützung",
+        "Technische Dokumentation",
+        "Projektmanagement: Organisation & Koordination"
+      ],
+      "room_items": [
+        "BHKW Leistungsoptimierung",
+        "Technische Dokumentation",
+        "Projektkoordination"
+      ]
+    },
+    {
+      "title": "Daten, Logistik & Prozesse",
+      "title_lines": [
+        "Daten, Logistik & Prozesse"
+      ],
+      "room_title": "Daten, Logistik & Prozesse",
+      "items": [
+        "Datenanalyse",
+        "ERP-gestütztes Informationsmanagement",
+        "SAP in der Logistik",
+        "Prozessmodellierung",
+        "Ressourcenmanagement",
+        "Technische & organisatorische Prozessoptimierung"
+      ],
+      "room_items": [
+        "Datenanalyse & ERP",
+        "SAP in der Logistik",
+        "Prozessoptimierung"
+      ]
+    },
+    {
+      "title": "KI & Automatisierung",
+      "title_lines": [
+        "KI & Automatisierung"
+      ],
+      "room_title": "KI & Automatisierung",
+      "items": [
+        "n8n",
+        "KI-Agenten bauen und Prozesse automatisieren",
+        "APIs & Datentransformation",
+        "RAG",
+        "Prompting",
+        "MCP",
+        "Testing & Monitoring",
+        "EU-AI-Act-Grundlagen",
+        "Claude Code"
+      ],
+      "room_items": [
+        "KI-Agenten bauen und Prozesse automatisieren",
+        "APIs, RAG & Prompting",
+        "Testing & Monitoring"
+      ]
+    },
+    {
+      "title": "Zusammenarbeit & Kommunikation",
+      "title_lines": [
+        "Zusammenarbeit &",
+        "Kommunikation"
+      ],
+      "room_title": "Zusammenarbeit & Kommunikation",
+      "items": [
+        "Einarbeitung & Schulung",
+        "Fachliche Weiterbildung",
+        "Optimierungen im Team",
+        "Teammeetings leiten & Projekte koordinieren",
+        "Internationale Zusammenarbeit",
+        "Englische Fachkommunikation"
+      ],
+      "room_items": [
+        "Einarbeitung & Schulung",
+        "Teammeetings leiten & Projekte koordinieren",
+        "Internationale Teamarbeit"
+      ]
+    },
+    {
+      "title": "Marketing & E-Commerce",
+      "title_lines": [
+        "Marketing & E-Commerce"
+      ],
+      "room_title": "Marketing & E-Commerce",
+      "items": [
+        "Social-Media-Marketing",
+        "Instagram & TikTok",
+        "Content-Planung",
+        "Kundengewinnung über Social Media",
+        "Shopify",
+        "Kampagnen & Ad-Texte"
+      ],
+      "room_items": [
+        "Social Media & Content",
+        "Kundengewinnung",
+        "Shopify & Kampagnen"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Deutsch",
+      "level": "Muttersprache / verhandlungssicher",
+      "room_level": "Muttersprache"
+    },
+    {
+      "name": "Englisch",
+      "level": "Sehr gut; verhandlungssicher im Berufsalltag",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Russisch",
+      "level": "Sehr gut",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Japanisch",
+      "level": "Anfänger",
+      "room_level": "Anfänger"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Prozesse verbessert",
+      "description": "Technische und organisatorische Abläufe analysiert und Verbesserungen im Team abgestimmt.",
+      "room_text": "Technische & organisatorische Optimierung"
+    },
+    {
+      "title": "Mitarbeitende weitergebildet",
+      "description": "Neue Kolleginnen und Kollegen eingearbeitet, erfahrene Mitarbeitende zu neuen Abläufen geschult.",
+      "room_text": "Einarbeitung & fachliche Weiterbildung"
+    },
+    {
+      "title": "International zusammengearbeitet",
+      "description": "Teams in der DACH-Region, UK, Japan und Indien unterstützt – vor Ort in der DACH-Region und aus der Ferne in UK, Japan und Indien.",
+      "room_text": "DACH-Region, UK, Japan & Indien"
+    },
+    {
+      "title": "Anpassungsfähig & lernbereit",
+      "description": "Ich passe mich neuen Technologien an und bilde mich kontinuierlich weiter, um fachlich auf dem aktuellen Stand zu bleiben.",
+      "room_text": "Kontinuierlich weiterbilden & aktuell bleiben"
+    }
+  ]
+}
