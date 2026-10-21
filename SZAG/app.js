@@ -1,5 +1,5 @@
-import {bindBirdsong} from './umgebung.js';
-import {createRoom} from './raum.js';
+import {bindAmbientSound} from './umgebung.js?v=20261021-2';
+import {createRoom} from './raum.js?v=20261021-2';
 import {createMobileSteps} from './mobile-steuerung.js';
 
 const $=selector=>document.querySelector(selector);
@@ -137,7 +137,7 @@ $('.light-toggle').addEventListener('click',()=>{
   bright=!bright;updateDaylight();
   try{localStorage.setItem('tamerlan-szag-daylight',bright?'day':'night');}catch{}
 });
-bindBirdsong($('.sound-toggle'));
+bindAmbientSound($('.sound-toggle'));
 const grain=document.createElement('canvas');grain.width=grain.height=128;const g=grain.getContext('2d');const pixels=g.createImageData(128,128);for(let i=0;i<pixels.data.length;i+=4){const value=Math.random()*255;pixels.data[i]=pixels.data[i+1]=pixels.data[i+2]=value;pixels.data[i+3]=255;}g.putImageData(pixels,0,0);$('.film-grain').style.backgroundImage=`url(${grain.toDataURL()})`;
 async function init(){
   if(reduce.matches){document.body.dataset.motion='reduced';}

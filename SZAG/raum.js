@@ -1,4 +1,4 @@
-import {createWindowView} from './umgebung.js';
+import {createWindowView} from './umgebung.js?v=20261021-2';
 import * as THREE from '../vendor/three.module.js';
 
 // Geometry and materials are created locally. No remote models or textures.
