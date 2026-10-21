@@ -1,4 +1,22 @@
 // Matched day/night photography and a real field recording from this website.
+import {createMobileSteps} from './mobile-steuerung.js';
+
+export function createSalzgitterSteps({isMobile=()=>false,now=()=>performance.now(),...options}){
+  const steps=createMobileSteps({...options,now});
+  let distance=0,lastWheel=-Infinity;
+  return {...steps,wheel(delta){
+    if(isMobile())return steps.wheel(delta);
+    const time=now();
+    if(time-lastWheel>180)distance=0;
+    lastWheel=time;
+    // Drop input during motion/rest, but do not wait indefinitely for a
+    // trackpad's quiet gap. A new intentional scroll can resume after arrival.
+    if(steps.isLocked()){distance=0;return false;}
+    distance+=delta;
+    if(Math.abs(distance)<(options.threshold??48))return false;
+    const direction=Math.sign(distance);distance=0;return steps.step(direction);
+  },reset(){distance=0;lastWheel=-Infinity;steps.reset();}};
+}
 export function createWindowView(THREE, renderer, panel) {
   const placeholder=panel.material.map;
   const images={};let day=true;

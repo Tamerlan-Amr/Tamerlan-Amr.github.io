@@ -1,6 +1,6 @@
-import {bindAmbientSound} from './umgebung.js?v=20261021-4';
-import {createRoom} from './raum.js?v=20261021-4';
-import {createMobileSteps} from './mobile-steuerung.js?v=20261021-4';
+import {bindAmbientSound,createSalzgitterSteps} from './umgebung.js?v=20261021-5';
+import {createRoom} from './raum.js?v=20261021-5';
+
 
 const $=selector=>document.querySelector(selector);
 const root=document.documentElement;
@@ -14,17 +14,16 @@ const privacy=$('.privacy-dialog');
 const reduce=matchMedia('(prefers-reduced-motion: reduce)');
 const mobile=matchMedia('(max-width: 720px)');
 let room=null,active=0,flat=false,bright=true,data;
-let steppedMode=false,touchingRoom=false;
-const mobileSteps=createMobileSteps({
-  rest:180,wheelGap:240,threshold:48,
+let steppedMode=false,touchingRoom=false,inspection=null;
+const mobileSteps=createSalzgitterSteps({
+  isMobile:()=>mobile.matches,rest:180,threshold:48,
   isMoving:()=>room?.isMoving()??false,
-  move(direction){const next=Math.max(0,Math.min(7,active+direction));if(next===active)return false;goTo(next);return true;}
+  move(direction){if(inspection){goTo(0);return true;}const next=Math.max(0,Math.min(6,active+direction));if(next===active)return false;goTo(next);return true;}
 });
-const labels=['Ein Raum. Mein Werdegang.','Das bin ich.','Salzgitter von oben.','Mein beruflicher Weg.','Lernen und weiterdenken.','Was ich beigetragen habe.','Was ich mitbringe.','Lassen Sie uns sprechen.'];
+const labels=['Ein Raum. Mein Werdegang.','Das bin ich.','Mein beruflicher Weg.','Lernen und weiterdenken.','Was ich beigetragen habe.','Was ich mitbringe.','Lassen Sie uns sprechen.'];
 const excerpts=[
   'Scrollen Sie durch mein Arbeitszimmer und lernen Sie mich kennen.',
   'Systemoptimierung, Problemlösung und Wissenstransfer – ergänzt durch KI.',
-  'Ein Blick auf das Werksgelände im gerahmten Bild auf meinem Schreibtisch.',
   'Daten verstehen, technische Abläufe verbessern und Wissen weitergeben.',
   'Vom Logistikstudium zur Weiterbildung in KI-Agenten und Workflows.',
   'Praxisbeiträge, internationale Zusammenarbeit und kontinuierliche Weiterbildung.',
@@ -33,7 +32,8 @@ const excerpts=[
 ];
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function goTo(index){
-  index=Math.max(0,Math.min(7,index));
+  inspection=null;
+  index=Math.max(0,Math.min(6,index));
   if(flat){setFlat(false);}
   // Synchronize the scroll position immediately; the room animates the direct pan.
   scrollTo({top:index*innerHeight*1.1,behavior:'instant'});
@@ -45,8 +45,8 @@ function syncNavigation(){
   const enabled=Boolean(room&&!flat),changed=enabled!==steppedMode;
   steppedMode=enabled;root.classList.toggle('mobile-room',enabled);
   if(changed){mobileSteps.reset();touchingRoom=false;}
-  if(room&&!flat&&(changed||enabled))goTo(active);
-  $('.scroll-hint').innerHTML='<span aria-hidden="true">↕</span> '+(enabled?(mobile.matches?'WISCHEN':'SCROLLEN')+' · EIN BEREICH PRO GESTE':'SCROLLEN · LEUCHTENDE OBJEKTE ANKLICKEN');
+  if(room&&!flat&&(changed||enabled)){if(inspection)room.focusObject(inspection);else goTo(active);}
+  $('.scroll-hint').innerHTML='<span aria-hidden="true">↕</span> '+(enabled?(mobile.matches?'WISCHEN · EIN BEREICH PRO GESTE':'SCROLLEN · KURZER HALT PRO BEREICH'):'SCROLLEN · LEUCHTENDE OBJEKTE ANKLICKEN');
   root.dataset.mobileHold=String(enabled&&mobileSteps.isLocked());
 }
 function acceptsSwipe(event){
@@ -71,13 +71,21 @@ addEventListener('wheel',event=>{
 },{passive:false});
 mobile.addEventListener('change',syncNavigation);
 addEventListener('resize',()=>{if(steppedMode)syncNavigation();});
+function inspectPicture(name){
+  goTo(0);inspection=name;room.focusObject(name);
+  $('#chapter-number').textContent='OBJEKTANSICHT';
+  $('#chapter-title').textContent=name==='picture'?'Salzgitter von oben.':'Zukunft formen.';
+  $('#chapter-caption').textContent=name==='picture'?'Die ausgewählte Werksansicht im Holzrahmen.':'SALCOS – der Wandel zu CO₂-ärmerem Stahl.';
+  $('.read-details').innerHTML='Zur Übersicht <span aria-hidden="true">↩</span>';
+}
 function showDetails(index=active){
+  if(inspection){goTo(0);return;}
   if(index===0){goTo(1);return;}
-  const targetIds={1:'text-profil',2:'text-werk',3:'text-weg',4:'text-weg',5:'text-projekte',6:'text-kompetenzen',7:'text-kontakt'};
-  $('#detail-title').textContent=labels[index];$('#detail-index').textContent='BEREICH '+String(index).padStart(2,'0')+' / 07';
+  const targetIds={1:'text-profil',2:'text-weg',3:'text-weg',4:'text-projekte',5:'text-kompetenzen',6:'text-kontakt'};
+  $('#detail-title').textContent=labels[index];$('#detail-index').textContent='BEREICH '+String(index).padStart(2,'0')+' / 06';
   const target=document.getElementById(targetIds[index]);
-  if(index===3 || index===4){
-    const selectors=index===3?data.timeline.filter(item=>!item.organization.includes('Syntax')&&!item.organization.includes('Ostfalia')):data.timeline.filter(item=>item.organization.includes('Syntax')||item.organization.includes('Ostfalia'));
+  if(index===2 || index===3){
+    const selectors=index===2?data.timeline.filter(item=>!item.organization.includes('Syntax')&&!item.organization.includes('Ostfalia')):data.timeline.filter(item=>item.organization.includes('Syntax')||item.organization.includes('Ostfalia'));
     const names=new Set(selectors.map(item=>item.organization));
     const entries=[...target.querySelectorAll('.milestone')].filter(item=>names.has(item.querySelector('.organization').textContent));
     $('#detail-content').innerHTML=entries.map(item=>item.outerHTML).join('');
@@ -86,10 +94,10 @@ function showDetails(index=active){
 }
 function setActive(index){
   if(active===index && $('#chapter-title').textContent===labels[index])return;
-  active=index;$('#chapter-number').textContent=String(index).padStart(2,'0')+' / 07';
+  active=index;$('#chapter-number').textContent=String(index).padStart(2,'0')+' / 06';
   $('#chapter-title').textContent=labels[index];$('#chapter-caption').textContent=excerpts[index];
   $('.read-details').innerHTML=(index===0?'Raum erkunden':'Informationen lesen')+' <span aria-hidden="true">'+(index===0?'↓':'↗')+'</span>';
-  $('.previous').disabled=index===0;$('.next').disabled=index===7;
+  $('.previous').disabled=index===0;$('.next').disabled=index===6;
   document.querySelectorAll('.stop-dots span').forEach((item,i)=>item.classList.toggle('active',i===index));
   document.querySelectorAll('[data-stop]').forEach(item=>{if(Number(item.dataset.stop)===index)item.setAttribute('aria-current','step');else item.removeAttribute('aria-current');});
   document.body.dataset.chapter=String(index);
@@ -98,11 +106,12 @@ function update(){
   if(!room)return;
   if(!flat){
     if(steppedMode){room.setProgress(active);root.dataset.mobileHold=String(mobileSteps.isLocked());}
-    else{const progress=scrollY/(innerHeight*1.1);room.setProgress(progress);setActive(Math.round(Math.max(0,Math.min(7,progress))));}
+    else{const progress=scrollY/(innerHeight*1.1);room.setProgress(progress);setActive(Math.round(Math.max(0,Math.min(6,progress))));}
   }
   requestAnimationFrame(update);
 }
 function setFlat(enabled){
+  if(inspection){inspection=null;room?.goTo(active);setActive(active);}
   flat=enabled;room?.setPaused(enabled);document.body.classList.toggle('text-mode',enabled);textToggle.textContent=enabled?'Zurück in den Raum':'Textansicht';
   textToggle.setAttribute('aria-pressed',String(enabled));textToggle.title=enabled?'Zurück zum 3D-Arbeitszimmer':'Alle Informationen als Text lesen';
   syncNavigation();
@@ -113,7 +122,7 @@ $('.previous').addEventListener('click',()=>goTo(active-1));$('.next').addEventL
 textToggle.addEventListener('click',()=>setFlat(!flat));
 $('.skip-link').addEventListener('click',event=>{if(room){event.preventDefault();setFlat(true);$('.readable').setAttribute('tabindex','-1');$('.readable').focus();}});
 $('.name-link').addEventListener('click',event=>{if(room){event.preventDefault();goTo(0);}});
-for(const link of document.querySelectorAll('[data-stop]'))link.addEventListener('click',event=>{if(room){event.preventDefault();goTo(Number(link.dataset.stop));}else{event.preventDefault();const id=Number(link.dataset.stop)===4?'text-weg':{0:'textansicht',1:'text-profil',2:'text-werk',3:'text-weg',5:'text-projekte',6:'text-kompetenzen',7:'text-kontakt'}[link.dataset.stop];document.getElementById(id)?.scrollIntoView();}});
+for(const link of document.querySelectorAll('[data-stop]'))link.addEventListener('click',event=>{if(room){event.preventDefault();goTo(Number(link.dataset.stop));}else{event.preventDefault();const id=Number(link.dataset.stop)===3?'text-weg':{0:'textansicht',1:'text-profil',2:'text-weg',4:'text-projekte',5:'text-kompetenzen',6:'text-kontakt'}[link.dataset.stop];document.getElementById(id)?.scrollIntoView();}});
 $('.privacy-button').addEventListener('click',event=>{if(typeof privacy.showModal==='function'){event.preventDefault();privacy.showModal();}});
 for(const dialog of [detail,privacy])dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
 addEventListener('keydown',event=>{
@@ -121,11 +130,12 @@ addEventListener('keydown',event=>{
   if(steppedMode&&['ArrowDown','ArrowUp','PageDown','PageUp',' '].includes(event.key)){
     event.preventDefault();if(!event.repeat)mobileSteps.step(['ArrowUp','PageUp'].includes(event.key)||event.shiftKey?-1:1);return;
   }
+  if(event.key==='Escape'&&inspection){event.preventDefault();goTo(0);return;}
   if(event.key==='ArrowRight'){event.preventDefault();goTo(active+1);}
   if(event.key==='ArrowLeft'){event.preventDefault();goTo(active-1);}
   if(event.key==='Home'){event.preventDefault();goTo(0);}
-  if(event.key==='End'){event.preventDefault();goTo(7);}
-  if(/^[1-7]$/.test(event.key)){event.preventDefault();goTo(Number(event.key));}
+  if(event.key==='End'){event.preventDefault();goTo(6);}
+  if(/^[1-6]$/.test(event.key)){event.preventDefault();goTo(Number(event.key));}
 });
 function updateDaylight(){
   room?.setLight(bright);
@@ -147,7 +157,7 @@ async function init(){
   try{
     const response=await fetch('./data.json');if(!response.ok)throw new Error('Profildaten konnten nicht geladen werden.');data=await response.json();
     sceneElement.hidden=false;
-    room=createRoom(sceneElement,data,index=>{if(active===index)showDetails(index);else goTo(index);});
+    room=createRoom(sceneElement,data,index=>{if(typeof index==='string')inspectPicture(index);else if(active===index)showDetails(index);else goTo(index);});
     document.body.classList.add('room-ready');journey.hidden=false;hud.hidden=false;textToggle.hidden=false;
     for(const selector of ['.scroll-hint','.light-toggle','.sound-toggle'])$(selector).hidden=false;
     try{bright=localStorage.getItem('tamerlan-szag-daylight')!=='night';}catch{}

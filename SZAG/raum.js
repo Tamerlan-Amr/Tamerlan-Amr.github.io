@@ -1,4 +1,4 @@
-import {createWindowView,createPosterView,createFramedView} from './umgebung.js?v=20261021-4';
+import {createWindowView,createPosterView,createFramedView} from './umgebung.js?v=20261021-5';
 import * as THREE from '../vendor/three.module.js';
 
 // Geometry and materials are created locally. No remote models or textures.
@@ -75,7 +75,6 @@ export function createRoom(container, data, onSelect) {
     mesh.material.fog=false;return mesh;
   }
   function pick(group,index,surface){
-    index=surface.station??(index>=2?index+1:index);
     group.userData.stop=index;
     // A warm rim and a slow light sweep mark the actual information surface.
     // Depth testing keeps this cue behind objects that physically cover it.
@@ -147,9 +146,9 @@ export function createRoom(container, data, onSelect) {
   const desk=new THREE.Group();room.add(desk);
   box(desk,7.5,.14,3.65,[-.10,1.25,-1.475],wood,.025);
   for(const x of [-3.50,3.30])for(const z of [-2.96,.02])box(desk,.12,1.18,.12,[x,.60,z],darkWood);
-  box(desk,1.1,.65,2.8,[-2.85,.84,-1.6],darkWood,.04);
-  for(let i=0;i<3;i++){box(desk,.99,.18,.04,[-2.85,.64+i*.19,-.175],wood,.012);box(desk,.27,.018,.06,[-2.85,.64+i*.19,-.14],bronze,.005);}
-  box(desk,1.1,.6,2.8,[2.75,.84,-1.6],darkWood,.03);
+  box(desk,1.1,.65,2.8,[-2.85,.84,-1.20],darkWood,.04);
+  for(let i=0;i<3;i++){box(desk,.99,.18,.04,[-2.85,.64+i*.19,.225],wood,.012);box(desk,.27,.018,.06,[-2.85,.64+i*.19,.26],bronze,.005);}
+  box(desk,1.1,.6,2.8,[2.75,.84,-1.20],darkWood,.03);
   const screenTexture=(theme,draw)=>textTexture(1024,768,(ctx,w,h)=>{
     const gradient=ctx.createLinearGradient(0,0,w,h);gradient.addColorStop(0,theme==='green'?'#102c24':'#172b48');gradient.addColorStop(1,theme==='green'?'#071d16':'#0c192d');ctx.fillStyle=gradient;ctx.fillRect(0,0,w,h);
     ctx.fillStyle=theme==='green'?'#e4f9e9':'#f0f5ff';draw(ctx,w,h);
@@ -262,8 +261,10 @@ export function createRoom(container, data, onSelect) {
   cylinder(lamp,.27,.31,.065,[0,0,0],bronze);
   cylinder(lamp,.023,.023,1.03,[0,.54,0],bronze,12);
   const shadeGeometry=new THREE.LatheGeometry([new THREE.Vector2(.44,0),new THREE.Vector2(.43,.035),new THREE.Vector2(.28,.28),new THREE.Vector2(.135,.52),new THREE.Vector2(.10,.55)],32);
-  const shade=new THREE.Mesh(shadeGeometry,material('#a47445',{metalness:.62,roughness:.32,side:THREE.DoubleSide}));shade.position.set(.02,1.03,-.035);shade.rotation.z=-.18;shade.castShadow=true;lamp.add(shade);
-  const lightDisk=new THREE.Mesh(new THREE.CircleGeometry(.40,32),new THREE.MeshBasicMaterial({color:'#ffe6ac'}));lightDisk.rotation.x=Math.PI/2;lightDisk.position.set(.02,1.026,-.035);lamp.add(lightDisk);
+  const shade=new THREE.Mesh(shadeGeometry,material('#a47445',{metalness:.62,roughness:.32,side:THREE.DoubleSide}));shade.position.set(.02,1.03,-.035);shade.rotation.z=0;shade.castShadow=true;lamp.add(shade);
+  const lining=new THREE.Mesh(new THREE.LatheGeometry([new THREE.Vector2(.423,.016),new THREE.Vector2(.412,.040),new THREE.Vector2(.263,.28),new THREE.Vector2(.119,.52),new THREE.Vector2(.087,.54)],32),material('#e5d8b6',{side:THREE.DoubleSide,roughness:.94}));lining.position.copy(shade.position);lamp.add(lining);
+  const shadeRim=new THREE.Mesh(new THREE.TorusGeometry(.435,.009,8,48),bronze);shadeRim.rotation.x=Math.PI/2;shadeRim.position.set(.02,1.04,-.035);lamp.add(shadeRim);
+  const lightDisk=new THREE.Mesh(new THREE.SphereGeometry(.065,20,14),new THREE.MeshBasicMaterial({color:'#ffe6ac'}));lightDisk.position.set(.02,1.16,-.035);lamp.add(lightDisk);
   const lampGlow=new THREE.PointLight('#ffc786',12,6,2);lampGlow.position.set(-3.00,2.41,-1.75);scene.add(lampGlow);
   const lampSpot=new THREE.SpotLight('#ffe0a7',55,8,.65,.65,2);lampSpot.position.set(-2.99,2.36,-1.75);lampSpot.target.position.set(-2.7,1.32,-.6);lampSpot.castShadow=true;lampSpot.shadow.mapSize.set(1024,1024);lampSpot.shadow.bias=-.001;scene.add(lampSpot,lampSpot.target);
   // Selected walnut frame replaces the cup at the same desk position.
@@ -280,7 +281,7 @@ export function createRoom(container, data, onSelect) {
   const frameView=createFramedView(THREE,renderer,picturePanel);
   const frameCaption=texture(768,80,(ctx,w,h)=>{ctx.fillStyle='#ede7d0';ctx.fillRect(0,0,w,h);ctx.fillStyle='#3c3a31';ctx.font='28px Georgia';ctx.textAlign='center';ctx.fillText('SALZGITTER FLACHSTAHL',w/2,51);});
   label(pictureFrame,.83,.086,[0,.103,.023],frameCaption,undefined,false);
-  pick(pictureFrame,2,{station:2,width:1.02,height:.76,at:[0,.40,.060]});
+  pick(pictureFrame,0,{width:1.02,height:.76,at:[0,.40,.060]});pictureFrame.userData.focus='picture';
   const frameStand=box(pictureFrame,.065,.45,.035,[0,.23,-.19],darkWood,.005);frameStand.rotation.x=.65;
 
   // Potted plant, using curved leaves and branches.
@@ -377,6 +378,7 @@ export function createRoom(container, data, onSelect) {
   const poster=texture(16,20,(ctx,w,h)=>{ctx.fillStyle='#eae9d4';ctx.fillRect(0,0,w,h);});
   const posterPanel=label(room,1.56,1.95,[4.35,3.75,-4.45],poster,undefined,false);
   const posterView=createPosterView(THREE,renderer,posterPanel);
+  pick(posterPanel,0,{width:1.56,height:1.95,at:[0,0,.008]});posterPanel.userData.focus='poster';
   for(const x of [3.64,5.07])for(const y of [2.84,4.66]){const tape=box(room,.23,.09,.008,[x,y,-4.424],material('#c6b58c'));tape.rotation.z=(x-4)*.3;}
   // A small contact table: corded telephone, open notepad and a plant.
   const contactTable=new THREE.Group();contactTable.position.set(4.75,0,-3.25);room.add(contactTable);
@@ -401,7 +403,11 @@ export function createRoom(container, data, onSelect) {
   const receiver=new THREE.Group();receiver.position.set(0,.18,-.21);phone.add(receiver);
   tube(receiver,[[-.27,0,0],[-.17,.04,0],[.17,.04,0],[.27,0,0]],.045,black);
   for(const x of [-.26,.26]){const earpiece=cylinder(receiver,.071,.078,.10,[x,-.02,0],black,20);earpiece.rotation.x=.18;}
-  const cord=[];for(let i=0;i<=100;i++){const t=i/100;cord.push([-.28-.075*Math.sin(t*24*Math.PI),.11-.05*Math.cos(t*24*Math.PI),-.21+t*.71]);}tube(phone,cord,.009,wireMat);
+  const cord=[[-.32,.17,-.21],[-.37,.12,-.18]];
+  for(let i=0;i<=90;i++){const t=i/90;cord.push([-.38-.065*Math.sin(t*Math.PI)+.018*Math.cos(t*18*Math.PI),.165*(1-t)-.035,-.18+t*.42+.018*Math.sin(t*18*Math.PI)]);}
+  cord.push([-.32,-.035,.24],[-.247,.02,.18]);tube(phone,cord,.008,wireMat);
+  box(phone,.022,.035,.043,[-.247,.02,.18],black,.003);
+  box(phone,.025,.030,.035,[-.32,.17,-.21],black,.003);
   smallPlant(contactTable,[-.55,1.12,-.58],.29);
 
   const hemi=new THREE.HemisphereLight('#afc7e1','#584027',1.1);scene.add(hemi);
@@ -411,18 +417,20 @@ export function createRoom(container, data, onSelect) {
   const boardLight=new THREE.PointLight('#e8d6af',6,7,2);boardLight.position.set(3.8,3.7,-1.1);scene.add(boardLight);
   const ambient=new THREE.AmbientLight('#e9be88',.21);scene.add(ambient);
   const camPoints=[
-    [0.00,3.50,7.65],[-1.30,2.85,1.95],[-2.55,1.93,1.15],[2.10,3.80,.95],[-4.96,2.78,.12],[1.99,2.28,.51],[2.06,2.78,-1.48],[4.72,3.80,-1.65]
+    [0.00,3.50,7.65],[-1.30,2.85,1.95],[2.10,3.80,.95],[-4.96,2.78,.12],[1.99,2.28,.51],[2.06,2.78,-1.48],[4.72,3.80,-1.65]
   ];
-  const targetPoints=[[-.10,2.40,-2.30],[-1.30,2.40,-1.66],[-2.80,1.72,-.43],[2.10,1.40,-.80],[-4.96,2.75,-2.63],[1.99,2.20,-1.87],[5.60,2.73,-1.48],[4.75,1.16,-3.23]];
+  const targetPoints=[[-.10,2.40,-2.30],[-1.30,2.40,-1.66],[2.10,1.40,-.80],[-4.96,2.75,-2.63],[1.99,2.20,-1.87],[5.60,2.73,-1.48],[4.75,1.16,-3.23]];
   const cameraCurve=new THREE.CatmullRomCurve3(camPoints.map(point=>new THREE.Vector3(...point)),false,'catmullrom',.24);
   const targetCurve=new THREE.CatmullRomCurve3(targetPoints.map(point=>new THREE.Vector3(...point)),false,'catmullrom',.20);
   const tempCamera=new THREE.Vector3(),tempTarget=new THREE.Vector3(),viewTarget=new THREE.Vector3();
-  let desired=0,current=0,lastTime=0,stopped=false,paused=false,lightMode=false,direct=false;
-  function setProgress(progress){desired=THREE.MathUtils.clamp(progress,0,7);}
+  let desired=0,current=0,lastTime=0,stopped=false,paused=false,lightMode=false,direct=false,objectFocus=null;
+  function setProgress(progress){desired=THREE.MathUtils.clamp(progress,0,6);}
+  function focusObject(name){if(!["picture","poster"].includes(name))return;objectFocus=name;direct=true;hovered=null;}
   function goTo(index){
+    objectFocus=null;
     // Skip the scroll curve's intermediate stops. Damping starts at the visible pose,
     // so another click or manual scrolling can retarget a pan without a position jump.
-    desired=current=THREE.MathUtils.clamp(index,0,7);direct=true;
+    desired=current=THREE.MathUtils.clamp(index,0,6);direct=true;
     hovered=null;renderer.domElement.style.cursor='default';
   }
   function setLight(bright){
@@ -441,11 +449,11 @@ export function createRoom(container, data, onSelect) {
   const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
   const occluders=[];room.traverse(object=>{if(object.isMesh&&!object.userData.glimmer)occluders.push(object);});
   let hovered=null;
-  function hit(event){const bounds=renderer.domElement.getBoundingClientRect();pointer.set((event.clientX-bounds.left)/bounds.width*2-1,-(event.clientY-bounds.top)/bounds.height*2+1);raycaster.setFromCamera(pointer,camera);const hits=raycaster.intersectObjects(occluders,false);if(!hits.length)return null;let object=hits[0].object;while(object && object.userData.stop===undefined)object=object.parent;return object??null;}
+  function hit(event){const bounds=renderer.domElement.getBoundingClientRect();pointer.set((event.clientX-bounds.left)/bounds.width*2-1,-(event.clientY-bounds.top)/bounds.height*2+1);raycaster.setFromCamera(pointer,camera);const hits=raycaster.intersectObjects(occluders,false);if(!hits.length)return null;let object=hits[0].object;while(object && object.userData.stop===undefined&&!object.userData.focus)object=object.parent;return object??null;}
   renderer.domElement.addEventListener('pointermove',event=>{hovered=hit(event);renderer.domElement.style.cursor=hovered?'pointer':'default';});
   renderer.domElement.addEventListener('pointerleave',()=>{hovered=null;renderer.domElement.style.cursor='default';});
   let pointerStart=null;renderer.domElement.addEventListener('pointerdown',event=>{pointerStart=[event.clientX,event.clientY];});
-  renderer.domElement.addEventListener('pointerup',event=>{if(!pointerStart)return;const distance=Math.hypot(event.clientX-pointerStart[0],event.clientY-pointerStart[1]);pointerStart=null;if(distance>8)return;const selected=hit(event);if(selected)onSelect(selected.userData.stop);});
+  renderer.domElement.addEventListener('pointerup',event=>{if(!pointerStart)return;const distance=Math.hypot(event.clientX-pointerStart[0],event.clientY-pointerStart[1]);pointerStart=null;if(distance>8)return;const selected=hit(event);if(selected)onSelect(selected.userData.focus??selected.userData.stop);});
   renderer.domElement.addEventListener('pointercancel',()=>{pointerStart=null;hovered=null;});
   function resize(){fitBoard();camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);}
   addEventListener('resize',resize);
@@ -454,14 +462,16 @@ export function createRoom(container, data, onSelect) {
     const dt=Math.min((time-lastTime)/1000,.06);lastTime=time;
     if(paused){requestAnimationFrame(animate);return;}
     const delta=desired-current;current=reduced.matches?Math.round(desired):Math.abs(delta)<.0004?desired:current+delta*(1-Math.exp(-dt*8));
-    const index=Math.min(6,Math.floor(current)),fraction=current-index;
+    const index=Math.min(5,Math.floor(current)),fraction=current-index;
     const eased=reduced.matches?current: index+THREE.MathUtils.smoothstep(fraction,.10,.90);
-    const t=THREE.MathUtils.clamp(eased/7,0,1);
+    const t=THREE.MathUtils.clamp(eased/6,0,1);
     cameraCurve.getPoint(t,tempCamera);targetCurve.getPoint(t,tempTarget);
+    if(objectFocus==='picture'){tempCamera.set(-2.55,1.93,1.15);tempTarget.set(-2.80,1.72,-.43);}
+    if(objectFocus==='poster'){tempCamera.set(4.35,3.75,-.30);tempTarget.set(4.35,3.75,-4.45);}
     const narrow=camera.aspect<.8;
-    const boardFocus=narrow?1-THREE.MathUtils.smoothstep(Math.abs(eased-6),0,.5):0;
-    const contactFocus=narrow?1-THREE.MathUtils.smoothstep(Math.abs(eased-7),0,.5):0;
-    const fit=narrow?THREE.MathUtils.lerp(THREE.MathUtils.lerp(Math.min(2.15,.83/camera.aspect),Math.min(3.1,1.10/camera.aspect),boardFocus),1.15,contactFocus):1;
+    const boardFocus=narrow&&!objectFocus?1-THREE.MathUtils.smoothstep(Math.abs(eased-5),0,.5):0;
+    const contactFocus=narrow&&!objectFocus?1-THREE.MathUtils.smoothstep(Math.abs(eased-6),0,.5):0;
+    const fit=narrow&&objectFocus==='poster'?Math.max(1,.54/camera.aspect):narrow?THREE.MathUtils.lerp(THREE.MathUtils.lerp(Math.min(2.15,.83/camera.aspect),Math.min(3.1,1.10/camera.aspect),boardFocus),1.15,contactFocus):1;
     if(fit>1)tempCamera.sub(tempTarget).multiplyScalar(fit).add(tempTarget);
     // Keep the whole board visible above the foreground monitors on phones.
     tempCamera.y+=boardFocus*2.45;tempTarget.y-=boardFocus*.45;
@@ -480,6 +490,7 @@ export function createRoom(container, data, onSelect) {
     renderer.domElement.dataset.camera=camera.position.toArray().map(value=>value.toFixed(3)).join(',');
     renderer.domElement.dataset.target=viewTarget.toArray().map(value=>value.toFixed(3)).join(',');
     renderer.domElement.dataset.navigation=direct?'direct':'scroll';
+    renderer.domElement.dataset.focus=objectFocus??'';
     renderer.domElement.dataset.stop=String(Math.round(current));
     renderer.domElement.dataset.progress=current.toFixed(3);
     renderer.domElement.dataset.lighting=lightMode?'day':'night';
@@ -487,5 +498,5 @@ export function createRoom(container, data, onSelect) {
   }
   resize();animate(0);
   renderer.domElement.dataset.ready='true';
-  return {setProgress,goTo,setLight,resize,isMoving:()=>direct,setPaused(value){paused=value;},dispose(){frameView.dispose();posterView.dispose();windowView.dispose();stopped=true;removeEventListener('resize',resize);scene.traverse(object=>{object.geometry?.dispose();if(object.material){for(const mat of Array.isArray(object.material)?object.material:[object.material]){mat.map?.dispose();mat.dispose();}}});renderer.dispose();},getCurrent:()=>current};
+  return {setProgress,goTo,focusObject,setLight,resize,isMoving:()=>direct,setPaused(value){paused=value;},dispose(){frameView.dispose();posterView.dispose();windowView.dispose();stopped=true;removeEventListener('resize',resize);scene.traverse(object=>{object.geometry?.dispose();if(object.material){for(const mat of Array.isArray(object.material)?object.material:[object.material]){mat.map?.dispose();mat.dispose();}}});renderer.dispose();},getCurrent:()=>current};
 }
