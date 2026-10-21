@@ -1,3 +1,4 @@
+import {bindBirdsong} from './umgebung.js';
 import {createRoom} from './raum.js';
 import {createMobileSteps} from './mobile-steuerung.js';
 
@@ -12,7 +13,7 @@ const detail=$('.detail-dialog');
 const privacy=$('.privacy-dialog');
 const reduce=matchMedia('(prefers-reduced-motion: reduce)');
 const mobile=matchMedia('(max-width: 720px)');
-let room=null,active=0,flat=false,bright=false,data;
+let room=null,active=0,flat=false,bright=true,data;
 let steppedMode=false,touchingRoom=false;
 const mobileSteps=createMobileSteps({
   isMoving:()=>room?.isMoving()??false,
@@ -124,58 +125,19 @@ addEventListener('keydown',event=>{
   if(event.key==='End'){event.preventDefault();goTo(6);}
   if(/^[1-6]$/.test(event.key)){event.preventDefault();goTo(Number(event.key));}
 });
-$('.light-toggle').addEventListener('click',()=>{
-  bright=!bright;room?.setLight(bright);$('.light-toggle').textContent=bright?'Licht: hell':'Licht: Abend';$('.light-toggle').setAttribute('aria-pressed',String(bright));
-  try{localStorage.setItem('tamerlan-room-light',bright?'light':'dark');}catch{}
-});
-// Rain behind glass: a quiet stereo bed, many soft impacts and occasional larger drops.
-// Generated once on demand; no microphone, network request or audio dependency.
-function createRainBuffer(context){
-  const rate=context.sampleRate,duration=24,length=Math.round(rate*duration);
-  const buffer=context.createBuffer(2,length,rate),channels=[buffer.getChannelData(0),buffer.getChannelData(1)];
-  let seed=581329;const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)|0;return (seed>>>0)/4294967296;};
-  for(let channel=0;channel<2;channel++){
-    const samples=channels[channel];let low=0;
-    for(let i=0;i<length;i++){
-      const white=random()*2-1;low+=.075*(white-low);
-      const swell=.86+.10*Math.sin(i/length*Math.PI*4)+.04*Math.sin(i/length*Math.PI*10);
-      samples[i]=(low*.028+white*.003)*swell;
-    }
-  }
-  for(let event=0;event<duration*70;event++){
-    const start=Math.floor(random()*length),large=random()<.065;
-    const life=large?.05+random()*.075:.009+random()*.030;
-    const frequency=large?450+random()*1100:1400+random()*3100;
-    const strength=large?.05+random()*.065:.012+random()*.030;
-    const pan=random(),left=Math.sqrt(1-pan),right=Math.sqrt(pan);
-    let softened=0;
-    for(let j=0;j<Math.ceil(life*rate);j++){
-      const t=j/rate,attack=Math.min(1,t/.0007),decay=Math.exp(-t/life*7);
-      softened+=.42*((random()*2-1)-softened);
-      const tap=Math.sin(2*Math.PI*frequency*t*(1-.22*t/life));
-      const tail=Math.sin(2*Math.PI*frequency*.53*t)*Math.exp(-t/life*4);
-      const sample=strength*attack*decay*(softened*.70+tap*.24+tail*.13);
-      const index=(start+j)%length;channels[0][index]+=sample*left;channels[1][index]+=sample*right;
-    }
-  }
-  // Remove a seam in the low background without losing any of the wrapped impacts.
-  for(const samples of channels){const offset=samples[length-1]-samples[0];const fade=Math.round(rate*.04);for(let i=0;i<fade;i++)samples[i]+=offset*(1-i/fade);}
-  return buffer;
+function updateDaylight(){
+  room?.setLight(bright);
+  const button=$('.light-toggle');
+  button.textContent=bright?'Tag / Nacht: Tag':'Tag / Nacht: Nacht';
+  button.title=bright?'Zur Nachtansicht wechseln':'Zur Tagansicht wechseln';
+  button.setAttribute('aria-label',bright?'Tagansicht aktiv. Zur Nacht wechseln':'Nachtansicht aktiv. Zum Tag wechseln');
+  button.setAttribute('aria-pressed',String(bright));
 }
-let audioContext=null,audioSource=null,audioGain=null;
-$('.sound-toggle').addEventListener('click',async()=>{
-  const button=$('.sound-toggle');
-  if(button.getAttribute('aria-pressed')==='true'){audioGain.gain.setTargetAtTime(0,audioContext.currentTime,.12);button.setAttribute('aria-pressed','false');button.textContent='Ton: aus';return;}
-  try{
-    if(!audioContext){
-      const AudioContext=window.AudioContext||window.webkitAudioContext;audioContext=new AudioContext();
-      audioSource=audioContext.createBufferSource();audioSource.buffer=createRainBuffer(audioContext);audioSource.loop=true;
-      audioGain=audioContext.createGain();audioGain.gain.value=0;
-      audioSource.connect(audioGain);audioGain.connect(audioContext.destination);audioSource.start();
-    }
-    await audioContext.resume();audioGain.gain.setTargetAtTime(.78,audioContext.currentTime,.35);button.setAttribute('aria-pressed','true');button.textContent='Ton: Regen';
-  }catch{button.textContent='Ton nicht verfügbar';button.disabled=true;}
+$('.light-toggle').addEventListener('click',()=>{
+  bright=!bright;updateDaylight();
+  try{localStorage.setItem('tamerlan-szag-daylight',bright?'day':'night');}catch{}
 });
+bindBirdsong($('.sound-toggle'));
 const grain=document.createElement('canvas');grain.width=grain.height=128;const g=grain.getContext('2d');const pixels=g.createImageData(128,128);for(let i=0;i<pixels.data.length;i+=4){const value=Math.random()*255;pixels.data[i]=pixels.data[i+1]=pixels.data[i+2]=value;pixels.data[i+3]=255;}g.putImageData(pixels,0,0);$('.film-grain').style.backgroundImage=`url(${grain.toDataURL()})`;
 async function init(){
   if(reduce.matches){document.body.dataset.motion='reduced';}
@@ -186,8 +148,8 @@ async function init(){
     room=createRoom(sceneElement,data,index=>{if(active===index)showDetails(index);else goTo(index);});
     document.body.classList.add('room-ready');journey.hidden=false;hud.hidden=false;textToggle.hidden=false;
     for(const selector of ['.scroll-hint','.light-toggle','.sound-toggle'])$(selector).hidden=false;
-    try{bright=localStorage.getItem('tamerlan-room-light')==='light';}catch{}
-    room.setLight(bright);$('.light-toggle').textContent=bright?'Licht: hell':'Licht: Abend';$('.light-toggle').setAttribute('aria-pressed',String(bright));
+    try{bright=localStorage.getItem('tamerlan-szag-daylight')!=='night';}catch{}
+    updateDaylight();
     $('.previous').disabled=true;setActive(0);syncNavigation();update();
     if(reduce.matches)setFlat(true);
   }catch(error){sceneElement.hidden=true;document.body.dataset.roomError='WebGL nicht verfügbar; vollständige Textansicht aktiv.';console.warn('3D-Ansicht nicht verfügbar; Textansicht bleibt lesbar.',error);}

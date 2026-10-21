@@ -1,3 +1,4 @@
+import {createWindowView} from './umgebung.js';
 import * as THREE from '../vendor/three.module.js';
 
 // Geometry and materials are created locally. No remote models or textures.
@@ -124,21 +125,9 @@ export function createRoom(container, data, onSelect) {
   box(room,12,.16,12,[0,5.7,0],plaster);
   const trim=material('#5a4937');box(room,11.6,.16,.09,[0,.11,-4.5],trim);box(room,.1,.16,11.6,[-5.69,.11,1.2],trim);box(room,.1,.16,11.6,[5.69,.11,1.2],trim);
 
-  const city=texture(1536,768,(ctx,w,h)=>{
-    const sky=ctx.createLinearGradient(0,0,0,h);sky.addColorStop(0,'#111e32');sky.addColorStop(.7,'#354252');sky.addColorStop(1,'#25302f');ctx.fillStyle=sky;ctx.fillRect(0,0,w,h);
-    for(let layer=0;layer<3;layer++){
-      let x=-10;
-      while(x<w){const bw=45+random()*90,bh=110+random()*230;const base=h-70-layer*55;ctx.fillStyle=['#22303d','#17242e','#182126'][layer];ctx.fillRect(x,base-bh,bw,bh);
-        for(let wy=base-bh+13;wy<base-10;wy+=20)for(let wx=x+9;wx<x+bw-8;wx+=15){if(random()<.48){ctx.fillStyle=random()>.4?'#c5b895':'#b4cbdd';ctx.globalAlpha=.15+random()*.6;ctx.fillRect(wx,wy,5,8);ctx.globalAlpha=1;}}
-        x+=bw+2;
-      }
-    }
-    ctx.fillStyle='#2f353b';ctx.fillRect(0,h-100,w,100);
-    for(let i=0;i<19;i++){const x=random()*w,y=h-30-random()*70;const glow=ctx.createRadialGradient(x,y,0,x,y,42);glow.addColorStop(0,'#ffdfaab0');glow.addColorStop(.1,'#fff1d194');glow.addColorStop(1,'#ffcf8b00');ctx.fillStyle=glow;ctx.fillRect(x-45,y-45,90,90);ctx.fillStyle='#edddb855';ctx.fillRect(x-2,y+10,4,50);}
-    for(let i=0;i<1400;i++){ctx.strokeStyle=`rgba(208,218,230,${random()*.07})`;const x=random()*w,y=random()*h;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-2,y+12+random()*25);ctx.stroke();}
-  });
+  const city=texture(16,16,(ctx,w,h)=>{ctx.fillStyle='#566b80';ctx.fillRect(0,0,w,h);});
   const cityPanel=label(room,6.5,3.6,[-.65,3.1,-4.45],city);
-  new THREE.TextureLoader().load(new URL('../assets/nachtstadt.png',import.meta.url).href,image=>{image.colorSpace=THREE.SRGBColorSpace;image.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());cityPanel.material.map.dispose();cityPanel.material.map=image;cityPanel.material.needsUpdate=true;renderer.domElement.dataset.exterior='ready';});
+  const windowView=createWindowView(THREE,renderer,cityPanel);
   const windowMat=material('#665642',{roughness:.6});
   for(const x of [-3.94,-.65,2.64])box(room,.10,3.8,.22,[x,3.1,-4.25],windowMat);
   for(const y of [1.24,3.24,4.95])box(room,6.72,.12,.26,[-.65,y,-4.25],windowMat);
@@ -151,32 +140,7 @@ export function createRoom(container, data, onSelect) {
     geometry.computeVertexNormals();const curtain=new THREE.Mesh(geometry,curtainMat);curtain.position.set(x,2.78,-4.02);curtain.castShadow=true;room.add(curtain);
   }
   box(room,8.3,.055,.055,[-.65,4.98,-3.91],bronze);
-  // All rain stays behind the window frame, between the exterior photo and glass.
-  const rainCount=210,rainPositions=new Float32Array(rainCount*6),rainOffsets=[];
-  for(let i=0;i<rainCount;i++)rainOffsets.push([random()*6.35-3.82,random()*3.50,.035+random()*.10,1.1+random()*1.4]);
-  const rainGeometry=new THREE.BufferGeometry();rainGeometry.setAttribute('position',new THREE.BufferAttribute(rainPositions,3));
-  const rain=new THREE.LineSegments(rainGeometry,new THREE.LineBasicMaterial({color:'#b4c9df',transparent:true,opacity:.13,depthWrite:false}));room.add(rain);
-  animated.push(time=>{rainOffsets.forEach((r,i)=>{const y=1.35+((r[1]-time*r[3])%3.5+3.5)%3.5;rainPositions.set([r[0],y,-4.405,r[0]-.009,Math.max(1.35,y-r[2]),-4.405],i*6);});rainGeometry.attributes.position.needsUpdate=true;});
-  const wetGlass=new THREE.ShaderMaterial({
-    transparent:true,depthWrite:false,uniforms:{time:{value:0}},
-    vertexShader:'varying vec2 glassUV; void main(){glassUV=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',
-    fragmentShader:`varying vec2 glassUV; uniform float time;
-      float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
-      void main(){
-        vec2 grid=glassUV*vec2(29.0,12.0);vec2 cell=floor(grid);float seed=hash(cell);
-        float phase=fract(time*(0.035+seed*0.025)+seed);
-        vec2 d=fract(grid)-vec2(0.22+seed*0.56,1.12-phase*1.28);
-        d.x+=sin((glassUV.y+seed)*35.0)*0.012;
-        float bead=1.0-smoothstep(0.07,0.16,length(d*vec2(3.3,1.8)));
-        float rim=1.0-smoothstep(0.02,0.07,abs(length(d*vec2(3.3,1.8))-0.12));
-        float trail=(1.0-smoothstep(0.008,0.030,abs(d.x)))*smoothstep(0.0,0.15,d.y)*(1.0-smoothstep(0.15,0.75,d.y));
-        float visible=step(0.36,seed);
-        gl_FragColor=vec4(mix(vec3(0.35,0.48,0.62),vec3(0.80,0.88,0.95),rim),visible*(bead*0.16+rim*0.18+trail*0.10));
-      }`
-  });
-  const glass=new THREE.Mesh(new THREE.PlaneGeometry(6.40,3.54),wetGlass);glass.position.set(-.65,3.12,-4.365);room.add(glass);
-  animated.push(time=>{wetGlass.uniforms.time.value=time;});
-  renderer.domElement.dataset.rain='exterior-glass';
+  renderer.domElement.dataset.weather='clear';
 
   // Walnut desk, drawers and detailed retro equipment.
   const desk=new THREE.Group();room.add(desk);
@@ -337,7 +301,8 @@ export function createRoom(container, data, onSelect) {
   const garland=[];for(let i=0;i<11;i++){const x=-3.55+i*.58,y=4.94-.18*Math.sin(i/10*Math.PI);garland.push([x,y,-3.86]);
     const bulb=new THREE.Mesh(new THREE.SphereGeometry(.031,10,8),cozyBulb);bulb.position.set(x,y-.055,-3.86);room.add(bulb);}
   tube(room,garland,.006,wireMat);
-  for(const x of [-2.8,1.5]){const glow=new THREE.PointLight('#ffc481',.65,3.0,2);glow.position.set(x,4.68,-3.7);scene.add(glow);}
+  const garlandLights=[];
+  for(const x of [-2.8,1.5]){const glow=new THREE.PointLight('#ffc481',.65,3.0,2);glow.position.set(x,4.68,-3.7);scene.add(glow);garlandLights.push(glow);}
   const sconce=new THREE.Group();sconce.position.set(-5.63,3.73,-1.72);room.add(sconce);
   box(sconce,.08,.30,.19,[0,0,0],bronze,.015);tube(sconce,[[.03,-.05,0],[.23,-.05,0],[.23,.05,0]],.018,bronze);
   const globe=new THREE.Mesh(new THREE.SphereGeometry(.13,18,12),cozyBulb);globe.position.set(.23,.15,0);sconce.add(globe);
@@ -464,7 +429,19 @@ export function createRoom(container, data, onSelect) {
     desired=current=THREE.MathUtils.clamp(index,0,6);direct=true;
     hovered=null;renderer.domElement.style.cursor='default';
   }
-  function setLight(bright){lightMode=bright;hemi.intensity=bright?2.6:1.1;fill.intensity=bright?2.2:1.0;ambient.intensity=bright?.65:.21;renderer.toneMappingExposure=bright?1.30:1.12;}
+  function setLight(bright){
+    lightMode=bright;windowView.setDay(bright);
+    hemi.color.set(bright?'#e0f0ff':'#afc7e1');hemi.intensity=bright?2.8:1.1;
+    moon.color.set(bright?'#fff1da':'#a2bedc');moon.intensity=bright?3.1:1.4;
+    fill.intensity=bright?1.6:1.0;ambient.intensity=bright?.34:.21;
+    lampGlow.intensity=bright?2.4:12;lampSpot.intensity=bright?12:55;
+    sconceGlow.intensity=bright?.4:2.8;
+    for(const glow of garlandLights)glow.intensity=bright?.10:.65;
+    cozyBulb.color.set(bright?'#b8ac94':'#ffd39a');
+    lightDisk.material.color.set(bright?'#d4ccba':'#ffe6ac');
+    screenLight.intensity=bright?.8:2.1;boardLight.intensity=bright?3.5:6;
+    renderer.toneMappingExposure=bright?1.20:1.12;
+  }
   const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
   const occluders=[];room.traverse(object=>{if(object.isMesh&&!object.userData.glimmer)occluders.push(object);});
   let hovered=null;
@@ -509,10 +486,10 @@ export function createRoom(container, data, onSelect) {
     renderer.domElement.dataset.navigation=direct?'direct':'scroll';
     renderer.domElement.dataset.stop=String(Math.round(current));
     renderer.domElement.dataset.progress=current.toFixed(3);
-    renderer.domElement.dataset.lighting=lightMode?'light':'dark';
+    renderer.domElement.dataset.lighting=lightMode?'day':'night';
     requestAnimationFrame(animate);
   }
   resize();animate(0);
   renderer.domElement.dataset.ready='true';
-  return {setProgress,goTo,setLight,resize,isMoving:()=>direct,setPaused(value){paused=value;},dispose(){stopped=true;removeEventListener('resize',resize);scene.traverse(object=>{object.geometry?.dispose();if(object.material){for(const mat of Array.isArray(object.material)?object.material:[object.material]){mat.map?.dispose();mat.dispose();}}});renderer.dispose();},getCurrent:()=>current};
+  return {setProgress,goTo,setLight,resize,isMoving:()=>direct,setPaused(value){paused=value;},dispose(){windowView.dispose();stopped=true;removeEventListener('resize',resize);scene.traverse(object=>{object.geometry?.dispose();if(object.material){for(const mat of Array.isArray(object.material)?object.material:[object.material]){mat.map?.dispose();mat.dispose();}}});renderer.dispose();},getCurrent:()=>current};
 }
