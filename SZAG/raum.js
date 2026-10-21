@@ -1,4 +1,4 @@
-import {createWindowView,createPosterView,createFramedView} from './umgebung.js?v=20261021-5';
+import {createWindowView,createPosterView,createFramedView} from './umgebung.js?v=20261021-6';
 import * as THREE from '../vendor/three.module.js';
 
 // Geometry and materials are created locally. No remote models or textures.
@@ -156,7 +156,9 @@ export function createRoom(container, data, onSelect) {
   const introTexture=screenTexture('blue',(ctx,w,h)=>{
     ctx.font='bold 23px Courier New';ctx.fillText('PROFIL   /   ONLINE-LEBENSLAUF',65,55);ctx.fillText('CH 01',w-165,55);
     ctx.font='bold 62px Courier New';const names=data.name.split(' ');ctx.fillText(names[0].toUpperCase(),65,133);ctx.fillText(names.slice(1).join(' ').toUpperCase(),65,206);
-    ctx.fillRect(65,238,w-130,2);ctx.font='bold 26px Courier New';wrap(ctx,data.content.eyebrow,65,283,w-130,36);
+    ctx.fillRect(65,238,w-130,2);let eyebrowSize=26;
+    do{ctx.font='bold '+eyebrowSize+'px Courier New';if(ctx.measureText(data.content.eyebrow).width<=w-130)break;}while(--eyebrowSize>18);
+    wrap(ctx,data.content.eyebrow,65,283,w-130,30);
     const introMeasure=document.createElement('canvas').getContext('2d');
     let introSize=46;
     for(;introSize>28;introSize--){
@@ -279,7 +281,7 @@ export function createRoom(container, data, onSelect) {
   const picturePanel=new THREE.Mesh(pictureGeometry,new THREE.MeshStandardMaterial({map:picturePlaceholder,roughness:1}));
   picturePanel.position.set(0,.425,.023);pictureFrame.add(picturePanel);
   const frameView=createFramedView(THREE,renderer,picturePanel);
-  const frameCaption=texture(768,80,(ctx,w,h)=>{ctx.fillStyle='#ede7d0';ctx.fillRect(0,0,w,h);ctx.fillStyle='#3c3a31';ctx.font='28px Georgia';ctx.textAlign='center';ctx.fillText('SALZGITTER FLACHSTAHL',w/2,51);});
+  const frameCaption=texture(768,80,(ctx,w,h)=>{ctx.fillStyle='#ede7d0';ctx.fillRect(0,0,w,h);ctx.fillStyle='#3c3a31';ctx.font='28px Georgia';ctx.textAlign='center';ctx.fillText('SALZGITTER FLACHSTAHL GMBH',w/2,51);});
   label(pictureFrame,.83,.086,[0,.103,.023],frameCaption,undefined,false);
   pick(pictureFrame,0,{width:1.02,height:.76,at:[0,.40,.060]});pictureFrame.userData.focus='picture';
   const frameStand=box(pictureFrame,.065,.45,.035,[0,.23,-.19],darkWood,.005);frameStand.rotation.x=.65;

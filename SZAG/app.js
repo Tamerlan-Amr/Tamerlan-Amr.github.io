@@ -1,5 +1,5 @@
-import {bindAmbientSound,createSalzgitterSteps} from './umgebung.js?v=20261021-5';
-import {createRoom} from './raum.js?v=20261021-5';
+import {bindAmbientSound,createSalzgitterSteps} from './umgebung.js?v=20261021-6';
+import {createRoom} from './raum.js?v=20261021-6';
 
 
 const $=selector=>document.querySelector(selector);
@@ -72,6 +72,15 @@ addEventListener('wheel',event=>{
 mobile.addEventListener('change',syncNavigation);
 addEventListener('resize',()=>{if(steppedMode)syncNavigation();});
 function inspectPicture(name){
+  if(inspection===name&&name==='picture'){
+    if(!room.isMoving()){
+      $('#detail-title').textContent='Das Werk von oben.';
+      $('#detail-index').textContent='SALZGITTER FLACHSTAHL GMBH';
+      $('#detail-content').replaceChildren($('#picture-details').content.cloneNode(true));
+      detail.showModal();
+    }
+    return;
+  }
   goTo(0);inspection=name;room.focusObject(name);
   $('#chapter-number').textContent='OBJEKTANSICHT';
   $('#chapter-title').textContent=name==='picture'?'Salzgitter von oben.':'Zukunft formen.';

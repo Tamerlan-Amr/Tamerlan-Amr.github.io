@@ -4,17 +4,17 @@
   "availability": "ab sofort",
   "updated": "2026-10-21",
   "content": {
-    "eyebrow": "BEWERBUNG · CONTROLLER (W/M/D) · SALZGITTER FLACHSTAHL",
+    "eyebrow": "BEWERBUNG · CONTROLLER (W/M/D) · SALZGITTER FLACHSTAHL GMBH",
     "headline": [
       "Technik verstehen.",
       "Zahlen erklären.",
       "Prozesse automatisieren."
     ],
-    "intro": "Für Ihr Kaltwalzwerk und die Oberflächenveredelung bringe ich mit: Werkskenntnis aus Ihrer Reserveteilwirtschaft, Erfahrung in der Auswertung von Betriebsdaten technischer Anlagen und die Fähigkeit, wiederkehrende Auswertungen mit KI selbst zu automatisieren.",
+    "intro": "Für das Kaltwalzwerk und die Oberflächenveredelung der Salzgitter Flachstahl GmbH bringe ich mit: Werkskenntnis aus der Reserveteilwirtschaft, Erfahrung mit Betriebsdaten technischer Anlagen und die Fähigkeit, wiederkehrende Auswertungen mit KI zu automatisieren.",
     "availability": "Ab sofort verfügbar",
-    "today_title": "Warum Salzgitter Flachstahl?",
+    "today_title": "Warum Salzgitter Flachstahl GmbH?",
     "today_text": [
-      "Ich kenne Ihr Werk von innen: In der Reserveteilwirtschaft habe ich erlebt, wie eng Anlagenverfügbarkeit, Materialbestände und Kosten zusammenhängen. Genau an dieser Verbindung von Technik und Zahlen möchte ich als Controller ansetzen."
+      "Ich kenne das Werk der Salzgitter Flachstahl GmbH von innen: In der Reserveteilwirtschaft habe ich erlebt, wie eng Anlagenverfügbarkeit, Materialbestände und Kosten zusammenhängen. Genau an dieser Verbindung von Technik und Zahlen möchte ich als Controller ansetzen."
     ],
     "strengths": [
       {
@@ -34,14 +34,14 @@
       }
     ],
     "contact_title": "Gerne im persönlichen Gespräch.",
-    "contact_text": "Ich freue mich darauf, Ihnen zu zeigen, wie ich Ihr Controlling mit Werkskenntnis, technischem Verständnis und Datenkompetenz verstärken kann.",
+    "contact_text": "Ich freue mich darauf, Ihnen zu zeigen, wie ich das Controlling der Salzgitter Flachstahl GmbH mit Werkskenntnis, technischem Verständnis und Datenkompetenz verstärken kann.",
     "meta_description": "Tamerlan Amirchanov · Mein Arbeitszimmer – Bewerbung als Controller (w/m/d) bei der Salzgitter Flachstahl GmbH",
     "highlights": {
       "experience": {
-        "label": "Warenanlieferungen analysiert",
-        "note": "Bachelorarbeit bei Salzgitter Flachstahl · Note 1,0",
+        "label": "Bachelorarbeit mit Kolloquium",
+        "note": "Salzgitter Flachstahl GmbH · Reserveteilwirtschaft",
         "bullets": [
-          "Stichprobe & Fehlerquoten ermittelt",
+          "Warenwirtschaft & Logistik mitoptimiert",
           "Soll-Konzept mit Handlungsempfehlungen"
         ]
       },
@@ -67,14 +67,15 @@
   },
   "metrics": [
     {
-      "value": 220,
+      "value": 1,
       "suffix": "",
-      "label": "Warenanlieferungen analysiert",
-      "note": "Bachelorarbeit bei Salzgitter Flachstahl · Note 1,0",
+      "label": "Bachelorarbeit mit Kolloquium",
+      "note": "Salzgitter Flachstahl GmbH · Reserveteilwirtschaft",
       "bullets": [
-        "Stichprobe & Fehlerquoten ermittelt",
+        "Warenwirtschaft & Logistik mitoptimiert",
         "Soll-Konzept mit Handlungsempfehlungen"
-      ]
+      ],
+      "display_value": "1,0"
     },
     {
       "value": 500,
@@ -104,7 +105,7 @@
       "organization": "Syntax Institut",
       "title": "Weiterbildung Künstliche Intelligenz",
       "role": "Modul 4 · KI-Agenten & Workflows",
-      "text": "10 Wochen Vollzeit, 500 UE, abgeschlossen am 02.10.2026.",
+      "text": "10 Wochen Vollzeit, 500 UE.",
       "bullets": [
         "Prozessautomatisierung mit KI-Agenten und n8n",
         "Datenintegration über APIs, Datentransformation und -aufbereitung",
@@ -121,7 +122,7 @@
       "start": "2021-01",
       "end": "2026-07",
       "organization": "WegscheidEntrenco GmbH",
-      "title": "Anlagenbetrieb aus der Ferne",
+      "title": "Anlagenbetrieb aus der Ferne und vor Ort",
       "role": "Remote Operation Service · Technischer Support & Dokumentation",
       "text": "Betreuung von Biomasse-BHKW in Deutschland, Österreich, der Schweiz, UK, Indien und Japan.",
       "bullets": [
@@ -163,14 +164,14 @@
       "role": "Praxisphase & Bachelorarbeit · Reserveteilwirtschaft (WTR)",
       "text": "Warenwirtschaft analysiert, Handlungsempfehlungen entwickelt.",
       "bullets": [
-        "Logistische Daten ausgewertet; an Projekten zur Effizienzsteigerung und Kostensenkung mitgewirkt",
+        "Aktiv an der Optimierung der Warenwirtschaft und Logistik mitgearbeitet",
         "Stichprobe von 220 Warenanlieferungen: Fehlerquoten ermittelt, Ursachen von Terminabweichungen per Ishikawa-Diagramm analysiert",
         "Prozessketten modelliert (Wertstromanalyse); Soll-Konzept mit Handlungsempfehlungen als Grundlage für ein Lastenheft erarbeitet",
         "SAP R/3 (MM, WM) für Bestandsführung, Materialfluss und Auftragsabwicklung eingesetzt; Reklamationsprozess (QM) analysiert",
         "Schnittstellen: Wareneingang (WTRE) · Zentrallager (WTRW) · Materialdisposition (WTRM) · interne IT (SAP) · Lieferanten"
       ],
       "room_bullets": [
-        "220 Anlieferungen analysiert",
+        "Aktiv an der Optimierung von Warenwirtschaft & Logistik mitgewirkt",
         "Soll-Konzept & Empfehlungen",
         "SAP R/3 (MM, WM)"
       ]
@@ -217,7 +218,7 @@
       "items": [
         "Remote Monitoring",
         "Störungsanalyse",
-        "BHKW Leistungsoptimierung",
+        "Anlagen-Leistungsoptimierung",
         "Inbetriebnahme-Unterstützung",
         "Technische Dokumentation",
         "Projektmanagement: Organisation & Koordination",
@@ -225,7 +226,7 @@
         "Projektumsetzung mit dem Projektmanagement"
       ],
       "room_items": [
-        "BHKW Leistungsoptimierung",
+        "Anlagen-Leistungsoptimierung",
         "Technische Dokumentation",
         "Projektkoordination"
       ]
