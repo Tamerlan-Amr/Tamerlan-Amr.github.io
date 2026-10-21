@@ -14,6 +14,8 @@ export function createWindowView(THREE, renderer, panel) {
     loader.load(new URL('./'+file+'?v=20261021-2',import.meta.url).href,image=>{
       image.colorSpace=THREE.SRGBColorSpace;
       image.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());
+      // Identical crop for both photographs: the stele moves left of the CRT.
+      image.repeat.set(.87,.87);image.offset.set(.13,.065);
       images[mode]=image;apply();
     },undefined,()=>{
       if((day?'day':'night')===mode)renderer.domElement.dataset.exteriorStatus='unavailable';
@@ -23,6 +25,45 @@ export function createWindowView(THREE, renderer, panel) {
     setDay(value){day=Boolean(value);apply();},
     dispose(){placeholder.dispose();for(const image of Object.values(images))image.dispose();}
   };
+}
+
+// The selected artwork uses the existing poster's size and wall position.
+export function createPosterView(THREE, renderer, panel) {
+  const placeholder=panel.material.map;
+  let image=null,disposed=false;
+  renderer.domElement.dataset.posterStatus='loading';
+  new THREE.TextureLoader().load(new URL('./salcos-poster.jpg',import.meta.url).href,value=>{
+    if(disposed){value.dispose();return;}
+    image=value;image.colorSpace=THREE.SRGBColorSpace;
+    image.anisotropy=renderer.capabilities.getMaxAnisotropy();
+    panel.material.map=image;panel.material.needsUpdate=true;
+    renderer.domElement.dataset.posterStatus='ready';
+  },undefined,()=>{if(!disposed)renderer.domElement.dataset.posterStatus='unavailable';});
+  return {dispose(){disposed=true;placeholder.dispose();image?.dispose();}};
+}
+
+// Use only the artwork inside the selected frame preview. UV coordinates keep
+// its photographed border/table out of the real three-dimensional room frame.
+export function createFramedView(THREE, renderer, panel) {
+  const placeholder=panel.material.map;
+  let image=null,disposed=false;
+  const uv=panel.geometry.attributes.uv;
+  const corners={tl:[159/1448,1-173/1086],tr:[1276/1448,1-158/1086],bl:[132/1448,1-822/1086],br:[1254/1448,1-879/1086]};
+  for(let i=0;i<uv.count;i++){
+    const u=uv.getX(i),v=uv.getY(i);
+    const bottom=corners.bl.map((n,j)=>n+(corners.br[j]-n)*u);
+    const top=corners.tl.map((n,j)=>n+(corners.tr[j]-n)*u);
+    uv.setXY(i,bottom[0]+(top[0]-bottom[0])*v,bottom[1]+(top[1]-bottom[1])*v);
+  }
+  uv.needsUpdate=true;renderer.domElement.dataset.frameStatus='loading';
+  new THREE.TextureLoader().load(new URL('./salzgitter-luftbild-rahmen.jpg',import.meta.url).href,value=>{
+    if(disposed){value.dispose();return;}
+    image=value;image.colorSpace=THREE.SRGBColorSpace;
+    image.anisotropy=renderer.capabilities.getMaxAnisotropy();
+    panel.material.map=image;panel.material.needsUpdate=true;
+    renderer.domElement.dataset.frameStatus='ready';
+  },undefined,()=>{if(!disposed)renderer.domElement.dataset.frameStatus='unavailable';});
+  return {dispose(){disposed=true;placeholder.dispose();image?.dispose();}};
 }
 
 export function bindAmbientSound(button) {

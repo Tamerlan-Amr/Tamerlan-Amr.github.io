@@ -1,4 +1,4 @@
-import {createWindowView} from './umgebung.js?v=20261021-2';
+import {createWindowView,createPosterView,createFramedView} from './umgebung.js?v=20261021-4';
 import * as THREE from '../vendor/three.module.js';
 
 // Geometry and materials are created locally. No remote models or textures.
@@ -75,6 +75,7 @@ export function createRoom(container, data, onSelect) {
     mesh.material.fog=false;return mesh;
   }
   function pick(group,index,surface){
+    index=surface.station??(index>=2?index+1:index);
     group.userData.stop=index;
     // A warm rim and a slow light sweep mark the actual information surface.
     // Depth testing keeps this cue behind objects that physically cover it.
@@ -265,24 +266,22 @@ export function createRoom(container, data, onSelect) {
   const lightDisk=new THREE.Mesh(new THREE.CircleGeometry(.40,32),new THREE.MeshBasicMaterial({color:'#ffe6ac'}));lightDisk.rotation.x=Math.PI/2;lightDisk.position.set(.02,1.026,-.035);lamp.add(lightDisk);
   const lampGlow=new THREE.PointLight('#ffc786',12,6,2);lampGlow.position.set(-3.00,2.41,-1.75);scene.add(lampGlow);
   const lampSpot=new THREE.SpotLight('#ffe0a7',55,8,.65,.65,2);lampSpot.position.set(-2.99,2.36,-1.75);lampSpot.target.position.set(-2.7,1.32,-.6);lampSpot.castShadow=true;lampSpot.shadow.mapSize.set(1024,1024);lampSpot.shadow.bias=-.001;scene.add(lampSpot,lampSpot.target);
-  const mug=new THREE.Group();mug.position.set(-2.80,1.32,-.45);desk.add(mug);
-  // Hollow ceramic profile; the coffee surface sits below the lip.
-  const cupProfile=[[0,.015],[.11,.015],[.14,.04],[.17,.39],[.151,.39],[.123,.075],[0,.075]].map(p=>new THREE.Vector2(...p));
-  const cup=new THREE.Mesh(new THREE.LatheGeometry(cupProfile,40),cream);cup.castShadow=true;cup.receiveShadow=true;mug.add(cup);
-  const coffee=new THREE.Mesh(new THREE.CircleGeometry(.146,40),new THREE.MeshBasicMaterial({color:'#382014'}));coffee.rotation.x=-Math.PI/2;coffee.position.y=.365;mug.add(coffee);
-  const rim=new THREE.Mesh(new THREE.TorusGeometry(.160,.010,10,40),cream);rim.rotation.x=Math.PI/2;rim.position.y=.389;mug.add(rim);
-  const handle=new THREE.Mesh(new THREE.TorusGeometry(.115,.033,8,24),cream);handle.position.set(-.16,.21,0);mug.add(handle);
-  const steamMaterial=new THREE.ShaderMaterial({transparent:true,depthWrite:false,side:THREE.DoubleSide,uniforms:{time:{value:0}},
-    vertexShader:'varying vec2 steamUV; void main(){steamUV=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',
-    fragmentShader:`varying vec2 steamUV; uniform float time; void main(){
-      float y=steamUV.y;float x=steamUV.x-0.5-sin(y*12.0-time*0.8)*0.10*y;
-      float w=0.035+y*0.09;float strand=exp(-x*x/(w*w));
-      float pulse=0.65+0.35*sin(y*15.0-time*1.4);
-      float alpha=strand*smoothstep(0.0,0.10,y)*(1.0-smoothstep(0.45,1.0,y))*pulse*0.23;
-      gl_FragColor=vec4(0.90,0.92,0.88,alpha);
-    }`});
-  for(let i=0;i<2;i++){const steam=new THREE.Mesh(new THREE.PlaneGeometry(.38,.76),steamMaterial);steam.position.set(i*.06-.03,.74,0);steam.rotation.y=i*Math.PI/2;mug.add(steam);}
-  animated.push(time=>{steamMaterial.uniforms.time.value=time;});
+  // Selected walnut frame replaces the cup at the same desk position.
+  const pictureFrame=new THREE.Group();pictureFrame.position.set(-2.80,1.32,-.45);pictureFrame.rotation.set(-.09,.16,0);desk.add(pictureFrame);
+  const frameWood=material('#68432d',{map:woodTexture,roughness:.58});
+  box(pictureFrame,1.02,.76,.045,[0,.40,-.016],darkWood,.008);
+  box(pictureFrame,.94,.68,.009,[0,.40,.012],cream);
+  for(const x of [-.4825,.4825])box(pictureFrame,.055,.76,.065,[x,.40,.024],frameWood,.006);
+  for(const y of [.0475,.7525])box(pictureFrame,.91,.055,.065,[0,y,.024],frameWood,.006);
+  const picturePlaceholder=texture(16,10,(ctx,w,h)=>{ctx.fillStyle='#727d6e';ctx.fillRect(0,0,w,h);});
+  const pictureGeometry=new THREE.PlaneGeometry(.86,.50,24,16);
+  const picturePanel=new THREE.Mesh(pictureGeometry,new THREE.MeshStandardMaterial({map:picturePlaceholder,roughness:1}));
+  picturePanel.position.set(0,.425,.023);pictureFrame.add(picturePanel);
+  const frameView=createFramedView(THREE,renderer,picturePanel);
+  const frameCaption=texture(768,80,(ctx,w,h)=>{ctx.fillStyle='#ede7d0';ctx.fillRect(0,0,w,h);ctx.fillStyle='#3c3a31';ctx.font='28px Georgia';ctx.textAlign='center';ctx.fillText('SALZGITTER FLACHSTAHL',w/2,51);});
+  label(pictureFrame,.83,.086,[0,.103,.023],frameCaption,undefined,false);
+  pick(pictureFrame,2,{station:2,width:1.02,height:.76,at:[0,.40,.060]});
+  const frameStand=box(pictureFrame,.065,.45,.035,[0,.23,-.19],darkWood,.005);frameStand.rotation.x=.65;
 
   // Potted plant, using curved leaves and branches.
   const plant=new THREE.Group();plant.position.set(-3.12,1.32,-2.90);desk.add(plant);
@@ -375,12 +374,9 @@ export function createRoom(container, data, onSelect) {
   }
   fitBoard();
   for(const x of [-1.12,1.12])for(const y of [-.78,.78]){const pin=new THREE.Mesh(new THREE.SphereGeometry(.025,8,6),material('#617458',{metalness:.4}));pin.position.set(x,y,.133);board.add(pin);}pick(board,5,{width:2.42,height:1.70,at:[0,0,.119]});
-  const poster=texture(800,1000,(ctx,w,h)=>{
-    ctx.fillStyle='#283e55';ctx.fillRect(0,0,w,h);ctx.fillStyle='#eddbaf';ctx.font='bold 80px Georgia';wrap(ctx,data.content.poster_title.toUpperCase(),58,170,w-116,104);
-    ctx.strokeStyle='#ead4a35a';ctx.lineWidth=3;for(let i=0;i<6;i++){ctx.beginPath();ctx.ellipse(405,622,280,100,.15+i*.4,0,Math.PI*2);ctx.stroke();}
-    ctx.font='24px Courier New';ctx.fillText('VERSTEHEN. VERBINDEN.',62,867);ctx.fillText('WEITERDENKEN.',62,915);
-  });
-  label(room,1.56,1.95,[4.35,3.75,-4.45],poster,undefined,false);
+  const poster=texture(16,20,(ctx,w,h)=>{ctx.fillStyle='#eae9d4';ctx.fillRect(0,0,w,h);});
+  const posterPanel=label(room,1.56,1.95,[4.35,3.75,-4.45],poster,undefined,false);
+  const posterView=createPosterView(THREE,renderer,posterPanel);
   for(const x of [3.64,5.07])for(const y of [2.84,4.66]){const tape=box(room,.23,.09,.008,[x,y,-4.424],material('#c6b58c'));tape.rotation.z=(x-4)*.3;}
   // A small contact table: corded telephone, open notepad and a plant.
   const contactTable=new THREE.Group();contactTable.position.set(4.75,0,-3.25);room.add(contactTable);
@@ -415,18 +411,18 @@ export function createRoom(container, data, onSelect) {
   const boardLight=new THREE.PointLight('#e8d6af',6,7,2);boardLight.position.set(3.8,3.7,-1.1);scene.add(boardLight);
   const ambient=new THREE.AmbientLight('#e9be88',.21);scene.add(ambient);
   const camPoints=[
-    [0.00,3.50,7.65],[-1.30,2.85,1.95],[2.10,3.80,.95],[-4.96,2.78,.12],[1.99,2.28,.51],[2.06,2.78,-1.48],[4.72,3.80,-1.65]
+    [0.00,3.50,7.65],[-1.30,2.85,1.95],[-2.55,1.93,1.15],[2.10,3.80,.95],[-4.96,2.78,.12],[1.99,2.28,.51],[2.06,2.78,-1.48],[4.72,3.80,-1.65]
   ];
-  const targetPoints=[[-.10,2.40,-2.30],[-1.30,2.40,-1.66],[2.10,1.40,-.80],[-4.96,2.75,-2.63],[1.99,2.20,-1.87],[5.60,2.73,-1.48],[4.75,1.16,-3.23]];
+  const targetPoints=[[-.10,2.40,-2.30],[-1.30,2.40,-1.66],[-2.80,1.72,-.43],[2.10,1.40,-.80],[-4.96,2.75,-2.63],[1.99,2.20,-1.87],[5.60,2.73,-1.48],[4.75,1.16,-3.23]];
   const cameraCurve=new THREE.CatmullRomCurve3(camPoints.map(point=>new THREE.Vector3(...point)),false,'catmullrom',.24);
   const targetCurve=new THREE.CatmullRomCurve3(targetPoints.map(point=>new THREE.Vector3(...point)),false,'catmullrom',.20);
   const tempCamera=new THREE.Vector3(),tempTarget=new THREE.Vector3(),viewTarget=new THREE.Vector3();
   let desired=0,current=0,lastTime=0,stopped=false,paused=false,lightMode=false,direct=false;
-  function setProgress(progress){desired=THREE.MathUtils.clamp(progress,0,6);}
+  function setProgress(progress){desired=THREE.MathUtils.clamp(progress,0,7);}
   function goTo(index){
     // Skip the scroll curve's intermediate stops. Damping starts at the visible pose,
     // so another click or manual scrolling can retarget a pan without a position jump.
-    desired=current=THREE.MathUtils.clamp(index,0,6);direct=true;
+    desired=current=THREE.MathUtils.clamp(index,0,7);direct=true;
     hovered=null;renderer.domElement.style.cursor='default';
   }
   function setLight(bright){
@@ -458,13 +454,13 @@ export function createRoom(container, data, onSelect) {
     const dt=Math.min((time-lastTime)/1000,.06);lastTime=time;
     if(paused){requestAnimationFrame(animate);return;}
     const delta=desired-current;current=reduced.matches?Math.round(desired):Math.abs(delta)<.0004?desired:current+delta*(1-Math.exp(-dt*8));
-    const index=Math.min(5,Math.floor(current)),fraction=current-index;
+    const index=Math.min(6,Math.floor(current)),fraction=current-index;
     const eased=reduced.matches?current: index+THREE.MathUtils.smoothstep(fraction,.10,.90);
-    const t=THREE.MathUtils.clamp(eased/6,0,1);
+    const t=THREE.MathUtils.clamp(eased/7,0,1);
     cameraCurve.getPoint(t,tempCamera);targetCurve.getPoint(t,tempTarget);
     const narrow=camera.aspect<.8;
-    const boardFocus=narrow?1-THREE.MathUtils.smoothstep(Math.abs(eased-5),0,.5):0;
-    const contactFocus=narrow?1-THREE.MathUtils.smoothstep(Math.abs(eased-6),0,.5):0;
+    const boardFocus=narrow?1-THREE.MathUtils.smoothstep(Math.abs(eased-6),0,.5):0;
+    const contactFocus=narrow?1-THREE.MathUtils.smoothstep(Math.abs(eased-7),0,.5):0;
     const fit=narrow?THREE.MathUtils.lerp(THREE.MathUtils.lerp(Math.min(2.15,.83/camera.aspect),Math.min(3.1,1.10/camera.aspect),boardFocus),1.15,contactFocus):1;
     if(fit>1)tempCamera.sub(tempTarget).multiplyScalar(fit).add(tempTarget);
     // Keep the whole board visible above the foreground monitors on phones.
@@ -491,5 +487,5 @@ export function createRoom(container, data, onSelect) {
   }
   resize();animate(0);
   renderer.domElement.dataset.ready='true';
-  return {setProgress,goTo,setLight,resize,isMoving:()=>direct,setPaused(value){paused=value;},dispose(){windowView.dispose();stopped=true;removeEventListener('resize',resize);scene.traverse(object=>{object.geometry?.dispose();if(object.material){for(const mat of Array.isArray(object.material)?object.material:[object.material]){mat.map?.dispose();mat.dispose();}}});renderer.dispose();},getCurrent:()=>current};
+  return {setProgress,goTo,setLight,resize,isMoving:()=>direct,setPaused(value){paused=value;},dispose(){frameView.dispose();posterView.dispose();windowView.dispose();stopped=true;removeEventListener('resize',resize);scene.traverse(object=>{object.geometry?.dispose();if(object.material){for(const mat of Array.isArray(object.material)?object.material:[object.material]){mat.map?.dispose();mat.dispose();}}});renderer.dispose();},getCurrent:()=>current};
 }
