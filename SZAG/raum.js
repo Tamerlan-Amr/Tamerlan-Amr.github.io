@@ -1,4 +1,4 @@
-import {createWindowView,createPosterView,createFramedView} from './umgebung.js?v=20261021-6';
+import {createWindowView,createPosterView,createFramedView} from './umgebung.js?v=20261022-2';
 import * as THREE from '../vendor/three.module.js';
 
 // Geometry and materials are created locally. No remote models or textures.
@@ -156,9 +156,10 @@ export function createRoom(container, data, onSelect) {
   const introTexture=screenTexture('blue',(ctx,w,h)=>{
     ctx.font='bold 23px Courier New';ctx.fillText('PROFIL   /   ONLINE-LEBENSLAUF',65,55);ctx.fillText('CH 01',w-165,55);
     ctx.font='bold 62px Courier New';const names=data.name.split(' ');ctx.fillText(names[0].toUpperCase(),65,133);ctx.fillText(names.slice(1).join(' ').toUpperCase(),65,206);
-    ctx.fillRect(65,238,w-130,2);let eyebrowSize=26;
-    do{ctx.font='bold '+eyebrowSize+'px Courier New';if(ctx.measureText(data.content.eyebrow).width<=w-130)break;}while(--eyebrowSize>18);
-    wrap(ctx,data.content.eyebrow,65,283,w-130,30);
+    ctx.fillRect(65,238,w-130,2);const monitorEyebrow=data.content.monitor_eyebrow??data.content.eyebrow;
+    let eyebrowSize=26;
+    do{ctx.font='bold '+eyebrowSize+'px Courier New';if(ctx.measureText(monitorEyebrow).width<=w-130)break;}while(--eyebrowSize>18);
+    wrap(ctx,monitorEyebrow,65,283,w-130,30);
     const introMeasure=document.createElement('canvas').getContext('2d');
     let introSize=46;
     for(;introSize>28;introSize--){

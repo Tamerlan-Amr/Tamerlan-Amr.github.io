@@ -1,5 +1,5 @@
-import {bindAmbientSound,createSalzgitterSteps} from './umgebung.js?v=20261021-6';
-import {createRoom} from './raum.js?v=20261021-6';
+import {bindAmbientSound,createSalzgitterSteps} from './umgebung.js?v=20261022-2';
+import {createRoom} from './raum.js?v=20261022-2';
 
 
 const $=selector=>document.querySelector(selector);
