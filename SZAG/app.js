@@ -1,5 +1,5 @@
-import {bindAmbientSound,createSalzgitterSteps} from './umgebung.js?v=20261022-2';
-import {createRoom} from './raum.js?v=20261022-2';
+import {bindAmbientSound,createSalzgitterSteps} from './umgebung.js?v=20261022-3';
+import {createRoom} from './raum.js?v=20261022-3';
 
 
 const $=selector=>document.querySelector(selector);
@@ -101,12 +101,20 @@ function showDetails(index=active){
   }else $('#detail-content').innerHTML=target.innerHTML.replace(/<p class="eyebrow">[\s\S]*?<\/p>/,'').replace(/<h2[^>]*>[\s\S]*?<\/h2>/,'');
   detail.showModal();
 }
+function syncArrowControls(){
+  const loop=mobile.matches;
+  $('.previous').disabled=!loop&&active===0;
+  $('.next').disabled=!loop&&active===6;
+  $('.previous').setAttribute('aria-label',loop&&active===0?'Zum letzten Bereich':'Vorheriger Bereich');
+  $('.next').setAttribute('aria-label',loop&&active===6?'Zur Übersicht':'Nächster Bereich');
+}
+function moveArrow(direction){goTo(mobile.matches?(active+direction+7)%7:active+direction);}
 function setActive(index){
-  if(active===index && $('#chapter-title').textContent===labels[index])return;
+  if(active===index && $('#chapter-title').textContent===labels[index]){syncArrowControls();return;}
   active=index;$('#chapter-number').textContent=String(index).padStart(2,'0')+' / 06';
   $('#chapter-title').textContent=labels[index];$('#chapter-caption').textContent=excerpts[index];
   $('.read-details').innerHTML=(index===0?'Raum erkunden':'Informationen lesen')+' <span aria-hidden="true">'+(index===0?'↓':'↗')+'</span>';
-  $('.previous').disabled=index===0;$('.next').disabled=index===6;
+  syncArrowControls();
   document.querySelectorAll('.stop-dots span').forEach((item,i)=>item.classList.toggle('active',i===index));
   document.querySelectorAll('[data-stop]').forEach(item=>{if(Number(item.dataset.stop)===index)item.setAttribute('aria-current','step');else item.removeAttribute('aria-current');});
   document.body.dataset.chapter=String(index);
@@ -127,7 +135,7 @@ function setFlat(enabled){
   if(enabled)scrollTo({top:0,behavior:'instant'});else{scrollTo({top:active*innerHeight*1.1,behavior:'instant'});room?.resize();}
 }
 $('.read-details').addEventListener('click',()=>showDetails());
-$('.previous').addEventListener('click',()=>goTo(active-1));$('.next').addEventListener('click',()=>goTo(active+1));
+$('.previous').addEventListener('click',()=>moveArrow(-1));$('.next').addEventListener('click',()=>moveArrow(1));
 textToggle.addEventListener('click',()=>setFlat(!flat));
 $('.skip-link').addEventListener('click',event=>{if(room){event.preventDefault();setFlat(true);$('.readable').setAttribute('tabindex','-1');$('.readable').focus();}});
 $('.name-link').addEventListener('click',event=>{if(room){event.preventDefault();goTo(0);}});
@@ -140,8 +148,8 @@ addEventListener('keydown',event=>{
     event.preventDefault();if(!event.repeat)mobileSteps.step(['ArrowUp','PageUp'].includes(event.key)||event.shiftKey?-1:1);return;
   }
   if(event.key==='Escape'&&inspection){event.preventDefault();goTo(0);return;}
-  if(event.key==='ArrowRight'){event.preventDefault();goTo(active+1);}
-  if(event.key==='ArrowLeft'){event.preventDefault();goTo(active-1);}
+  if(event.key==='ArrowRight'){event.preventDefault();moveArrow(1);}
+  if(event.key==='ArrowLeft'){event.preventDefault();moveArrow(-1);}
   if(event.key==='Home'){event.preventDefault();goTo(0);}
   if(event.key==='End'){event.preventDefault();goTo(6);}
   if(/^[1-6]$/.test(event.key)){event.preventDefault();goTo(Number(event.key));}

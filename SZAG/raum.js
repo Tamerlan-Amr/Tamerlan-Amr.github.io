@@ -1,4 +1,4 @@
-import {createWindowView,createPosterView,createFramedView} from './umgebung.js?v=20261022-2';
+import {createWindowView,createPosterView,createFramedView} from './umgebung.js?v=20261022-3';
 import * as THREE from '../vendor/three.module.js';
 
 // Geometry and materials are created locally. No remote models or textures.
@@ -85,11 +85,11 @@ export function createRoom(container, data, onSelect) {
       fragmentShader:`varying vec2 uvSurface; uniform float time; uniform float focus; uniform float phase;
         void main(){
           float edge=min(min(uvSurface.x,1.0-uvSurface.x),min(uvSurface.y,1.0-uvSurface.y));
-          float rim=1.0-smoothstep(0.0,0.018,edge);
+          float rim=1.0-smoothstep(0.0,0.030,edge);
           float sweep=fract(uvSurface.x*0.72+uvSurface.y*0.28-time*0.12+phase);
           float sheen=pow(max(0.0,1.0-abs(sweep-0.5)/0.085),2.0);
-          float breathe=0.84+0.16*sin(time*1.25+phase);
-          float alpha=rim*(0.22*breathe+focus*0.36+sheen*0.18);
+          float breathe=0.92+0.08*sin(time*1.25+phase);
+          float alpha=rim*min(0.95,0.46*breathe+focus*0.40+sheen*0.30);
           gl_FragColor=vec4(1.0,0.83,0.54,alpha);
         }`
     });
