@@ -1,0 +1,8 @@
+/* This personal FI application keeps the warm room and a restrained red cue. */
+.room-header .name-link{color:#f4e8d5}
+.room-header a[aria-current="step"]{color:#f4c6bc}
+.room-hud .read-details{border-color:#b75c51a3}
+.room-footer .light-toggle[aria-pressed="true"]{border-color:#b75c51a3}
+.readable .readable-kicker,.readable .eyebrow{color:#efb6ac}
+.readable .accent-line{color:#efb6ac}
+@media(prefers-reduced-motion:reduce){.film-grain{display:none}}

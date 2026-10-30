@@ -1,0 +1,314 @@
+{
+  "name": "Tamerlan Amirchanov",
+  "email": "t.amirchanova@gmail.com",
+  "availability": "ab sofort",
+  "updated": "2026-10-30",
+  "content": {
+    "eyebrow": "BEWERBUNG · MAJOR INCIDENT MANAGER · FINANZ INFORMATIK",
+    "monitor_eyebrow": "MAJOR INCIDENT MANAGER",
+    "headline": [
+      "Ruhe bewahren.",
+      "Störungen klären.",
+      "Betrieb sichern."
+    ],
+    "intro": "Für die Finanz Informatik bringe ich mit: Störungsanalyse, Leitung von Teammeetings und klare technische Dokumentation aus dem 24/7-Anlagenbetrieb.",
+    "availability": "Ab sofort verfügbar",
+    "today_title": "Mein nächster Schritt: IT-Betrieb.",
+    "today_text": [
+      "Im technischen Anlagenbetrieb habe ich Betriebsdaten überwacht, Störungen analysiert und die Bearbeitung mit Kunden und Teams abgestimmt. Diese Erfahrung möchte ich im EuB-Management der Finanz Informatik einbringen und mich gezielt in die IT-Produktionsumgebung einarbeiten."
+    ],
+    "strengths": [
+      {
+        "group": "technik",
+        "title": "Die Lage verstehen.",
+        "text": "Betriebsdaten auswerten, Störungen eingrenzen und Ursachen strukturiert untersuchen."
+      },
+      {
+        "group": "zusammenarbeit",
+        "title": "Beteiligte abstimmen.",
+        "text": "Teammeetings leiten, technische Themen verständlich vermitteln und die Bearbeitung gemeinsam abstimmen."
+      },
+      {
+        "group": "prozesse",
+        "title": "Wissen festhalten.",
+        "text": "Technische Dokumentation pflegen, Ergebnisse nachvollziehbar sichern und Mitarbeitende einarbeiten."
+      }
+    ],
+    "contact_title": "Gerne im persönlichen Gespräch.",
+    "contact_text": "Ich möchte den verlässlichen Betrieb bei der Finanz Informatik als Major Incident Manager unterstützen. Für die Arbeit in einem rund um die Uhr besetzten Team bin ich offen und ab sofort verfügbar.",
+    "meta_description": "Tamerlan Amirchanov · MajorIM · Bewerbung als Major Incident Manager bei der Finanz Informatik",
+    "poster_title": "Service im Blick.",
+    "highlights": {
+      "experience": {
+        "label": "Technischer Anlagenbetrieb",
+        "note": "Teamauftrag im Drei-Schicht-System",
+        "bullets": [
+          "Betriebsdaten überwacht",
+          "Störungen analysiert & dokumentiert"
+        ]
+      },
+      "ai": {
+        "label": "KI-Weiterbildung",
+        "note": "Modul 4 · KI-Agenten & Workflows",
+        "bullets": [
+          "Fehlerbehandlung & Datenaufbereitung",
+          "Testing, Monitoring & Alerting"
+        ]
+      },
+      "international": {
+        "suffix": " Länder",
+        "label": "Internationale Zusammenarbeit",
+        "note": "DACH, UK, Indien & Japan",
+        "bullets": [
+          "DACH vor Ort; UK, Indien & Japan remote",
+          "Englische Fachkommunikation"
+        ]
+      }
+    },
+    "room_name": "MajorIM"
+  },
+  "metrics": [
+    {
+      "value": 24,
+      "display_value": "24/7",
+      "suffix": "",
+      "label": "Technischer Anlagenbetrieb",
+      "note": "Teamauftrag im Drei-Schicht-System",
+      "bullets": [
+        "01/2021–07/2026 bei WegscheidEntrenco",
+        "Störungsanalyse und Dokumentation"
+      ]
+    },
+    {
+      "value": 500,
+      "suffix": " UE",
+      "label": "KI-Weiterbildung",
+      "note": "Modul 4 · KI-Agenten & Workflows",
+      "bullets": [
+        "Fehlerbehandlung und Datenaufbereitung",
+        "Testing, Monitoring und Alerting"
+      ]
+    },
+    {
+      "value": 6,
+      "suffix": " Länder",
+      "label": "Internationale Zusammenarbeit",
+      "note": "DACH, UK, Indien & Japan",
+      "bullets": [
+        "DACH vor Ort; UK, Indien & Japan remote",
+        "Fachkommunikation auf Englisch"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "start": "2026-08",
+      "end": "2026-10",
+      "organization": "Syntax Institut",
+      "title": "Weiterbildung Künstliche Intelligenz",
+      "role": "Modul 4 · KI-Agenten & Workflows",
+      "text": "500 Unterrichtseinheiten.",
+      "room_bullets": [
+        "Fehlerbehandlung & Datenaufbereitung",
+        "Testing, Monitoring & Alerting"
+      ],
+      "bullets": [
+        "Modul 4: KI-Agenten und Workflows in Unternehmensprozessen; 500 Unterrichtseinheiten.",
+        "APIs, Datentransformation, Fehlerbehandlung, Testing, Monitoring und Alerting.",
+        "A4Q AI Compliance / EU AI Act weiterhin in Vorbereitung."
+      ]
+    },
+    {
+      "start": "2021-01",
+      "end": "2026-07",
+      "organization": "WegscheidEntrenco GmbH",
+      "title": "Technischer Anlagenbetrieb im 24/7-Team",
+      "role": "Remote Operation Service · Support & Dokumentation",
+      "text": "Betreuung von Biomasse-Blockheizkraftwerken im internationalen Remote Operation Service.",
+      "room_bullets": [
+        "Betriebsdaten & Störungen analysiert",
+        "Teammeetings geleitet",
+        "Dokumentation, Einarbeitung & Schulung"
+      ],
+      "bullets": [
+        "Betriebsdaten und Leistungsparameter überwacht; technische Störungen analysiert und an ihrer nachhaltigen Behebung mitgewirkt.",
+        "Wöchentliche Remote-Teammeetings zu Fehlerbehebungen und Optimierungen geleitet.",
+        "Technische Dokumentationen erstellt, Wartungs- und Reparaturarbeiten nachvollziehbar dokumentiert.",
+        "Erster Ansprechpartner für das Service-Asia-Team; neue und erfahrene Mitarbeitende eingearbeitet und geschult.",
+        "Kunden, technische Leitung und internationale Teams abgestimmt; Fachkommunikation überwiegend auf Englisch.",
+        "DACH-Inbetriebnahmen vor Ort, UK, Indien und Japan aus der Ferne unterstützt."
+      ]
+    },
+    {
+      "start": "2019-02",
+      "end": "2020-01",
+      "organization": "Salzgitter Flachstahl GmbH",
+      "title": "Daten und Prozesse verstehen",
+      "role": "Praxisphase & Bachelorarbeit · Reserveteilwirtschaft",
+      "text": "Logistische Daten ausgewertet und Prozessketten modelliert.",
+      "room_bullets": [
+        "Daten & Schwachstellen analysiert",
+        "Prozessketten modelliert",
+        "SAP in der Reserveteilwirtschaft"
+      ],
+      "bullets": [
+        "Logistische Daten erhoben und ausgewertet sowie Schwachstellen in der Reserveteilwirtschaft untersucht.",
+        "Prozessketten visualisiert und an Verbesserungen der Warenwirtschaft und Logistik mitgearbeitet.",
+        "SAP R/3 MM/WM für Bestände, Materialfluss und Aufträge eingesetzt; QM-Reklamationsprozess analysiert."
+      ]
+    },
+    {
+      "start": "2015-09",
+      "end": "2019-12",
+      "organization": "Ostfalia Hochschule für angewandte Wissenschaften",
+      "title": "B.Sc. Logistik- und Informationsmanagement",
+      "role": "Ressourcenmanagement · Anwendungssysteme",
+      "text": "Logistische Prozesse und Informationsmanagement.",
+      "room_text": "Bachelorarbeit mit Kolloquium: Note 1,0. Analyse der Warenwirtschaft bei Salzgitter Flachstahl.",
+      "bullets": [
+        "Schwerpunkte Ressourcenmanagement und Betriebswirtschaftliche Anwendungssysteme, jeweils Note 2,0.",
+        "Bachelorarbeit mit Kolloquium: Analyse der Warenwirtschaft der Salzgitter Flachstahl GmbH, Note 1,0."
+      ]
+    },
+    {
+      "start": "2014-12",
+      "end": "2018-02",
+      "organization": "LKY Wartungs- und Industrieservice GmbH",
+      "title": "Abläufe im operativen Team",
+      "role": "Lagerwirtschaft",
+      "text": "Praktische Logistikerfahrung im Lagerbetrieb.",
+      "room_bullets": [
+        "Wareneingang geprüft & kommissioniert",
+        "Lagerplätze im Team optimiert"
+      ],
+      "bullets": [
+        "Wareneingang geprüft, Aufträge kommissioniert und Lagerplätze im Team optimiert."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "title": "Technischer Betrieb & Störungsanalyse",
+      "title_lines": [
+        "Technischer Betrieb",
+        "& Störungsanalyse"
+      ],
+      "room_title": "Technischer Betrieb",
+      "items": [
+        "Remote Monitoring",
+        "Betriebsdaten und Leistungsparameter",
+        "Technische Störungsanalyse",
+        "Ursachenanalyse",
+        "Mitwirkung an nachhaltiger Fehlerbehebung"
+      ],
+      "room_items": [
+        "Remote Monitoring",
+        "Störungsanalyse",
+        "Ursachen verstehen"
+      ]
+    },
+    {
+      "title": "Koordination & Kommunikation",
+      "title_lines": [
+        "Koordination",
+        "& Kommunikation"
+      ],
+      "room_title": "Koordination",
+      "items": [
+        "Wöchentliche Teammeetings leiten",
+        "Technische Abstimmung mit Kunden und Teams",
+        "Projektorganisation und -koordination",
+        "Internationale Zusammenarbeit",
+        "Englische Fachkommunikation"
+      ],
+      "room_items": [
+        "Teammeetings leiten",
+        "Beteiligte abstimmen",
+        "Internationale Teamarbeit"
+      ]
+    },
+    {
+      "title": "Dokumentation & Wissenstransfer",
+      "title_lines": [
+        "Dokumentation",
+        "& Wissenstransfer"
+      ],
+      "room_title": "Dokumentation",
+      "items": [
+        "Technische Dokumentationen erstellen und pflegen",
+        "Wartungs- und Reparaturarbeiten dokumentieren",
+        "Einarbeitung neuer Mitarbeitender",
+        "Schulung zu neuen Abläufen",
+        "ERP-gestützte Datenpflege"
+      ],
+      "room_items": [
+        "Technische Dokumentation",
+        "Schulung & Einarbeitung",
+        "Wissen nachvollziehbar sichern"
+      ]
+    },
+    {
+      "title": "Daten & KI-Workflows",
+      "title_lines": [
+        "Daten & KI-Workflows"
+      ],
+      "room_title": "Daten & KI",
+      "items": [
+        "Datenanalyse und Prozessmodellierung",
+        "MS Office: Excel, Word, PowerPoint, Outlook",
+        "n8n, APIs und Datentransformation aus Weiterbildung/Projekt",
+        "Fehlerbehandlung, Testing und Monitoring aus Weiterbildung",
+        "EU-AI-Act-Grundlagen; A4Q AI Compliance in Vorbereitung"
+      ],
+      "room_items": [
+        "Daten & Prozessanalyse",
+        "KI-Workflows: Weiterbildung",
+        "Testing & Monitoring"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Deutsch",
+      "level": "Muttersprache / verhandlungssicher",
+      "room_level": "Muttersprache"
+    },
+    {
+      "name": "Englisch",
+      "level": "Sehr gut; verhandlungssicher im Berufsalltag",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Russisch",
+      "level": "Sehr gut",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Japanisch",
+      "level": "Anfänger",
+      "room_level": "Anfänger"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Störungen analysiert",
+      "description": "Betriebsdaten überwacht, technische Störungen untersucht und an nachhaltigen Lösungen im Anlagenbetrieb mitgewirkt.",
+      "room_text": "Betriebsdaten & Ursachen"
+    },
+    {
+      "title": "Teammeetings geleitet",
+      "description": "Wöchentliche Remote-Teammeetings zu Fehlerbehebungen und Optimierungen geleitet; Verbesserungen mit der technischen Leitung abgestimmt.",
+      "room_text": "Klar abstimmen & gemeinsam lösen"
+    },
+    {
+      "title": "Dokumentation gepflegt",
+      "description": "Technische Unterlagen erstellt und aktualisiert sowie Wartungs- und Reparaturarbeiten nachvollziehbar dokumentiert.",
+      "room_text": "Ergebnisse nachvollziehbar sichern"
+    },
+    {
+      "title": "Wissen weitergegeben",
+      "description": "Neue Mitarbeitende eingearbeitet und erfahrene Mitarbeitende zu Systemen, Prozessen und technischen Abläufen geschult.",
+      "room_text": "Einarbeitung & Schulung"
+    }
+  ]
+}
