@@ -1,0 +1,314 @@
+{
+  "name": "Tamerlan Amirchanov",
+  "email": "t.amirchanova@gmail.com",
+  "availability": "ab sofort",
+  "updated": "2026-10-30",
+  "content": {
+    "eyebrow": "BEWERBUNG · CONSULTANT KUNDENSERVICE · FINANZ INFORMATIK",
+    "monitor_eyebrow": "CONSULTANT KUNDENSERVICE",
+    "headline": [
+      "Fragen verstehen.",
+      "Daten prüfen.",
+      "Lösungen erklären."
+    ],
+    "intro": "Für die Finanz Informatik verbinde ich Kundenservice, Datenanalyse und Wissenstransfer aus dem technischen Support mit betriebswirtschaftlichen Grundlagen und KI-Weiterbildung.",
+    "availability": "Ab sofort verfügbar",
+    "today_title": "Mein nächster Schritt: Kundenservice & BI.",
+    "today_text": [
+      "Anwenderfragen verstehen, Daten analysieren und Ergebnisse verständlich erklären: Diese Erfahrung aus dem technischen Support möchte ich in der Einheit KS Rechnungslegung & Controlling der Finanz Informatik einbringen. Bankfachliches Vertriebscontrolling ist für mich ein neues Fachgebiet, in das ich mich gezielt einarbeite."
+    ],
+    "strengths": [
+      {
+        "group": "zusammenarbeit",
+        "title": "Anwender verstehen.",
+        "text": "Komplexe technische Fragen im Kundenkontakt verständlich klären, überwiegend auch auf Englisch."
+      },
+      {
+        "group": "technik",
+        "title": "Daten prüfen.",
+        "text": "Betriebsdaten auswerten, Ursachen untersuchen und Prozesse strukturiert analysieren."
+      },
+      {
+        "group": "prozesse",
+        "title": "Wissen weitergeben.",
+        "text": "Lösungen dokumentieren, Mitarbeitende einarbeiten und neue Abläufe verständlich schulen."
+      }
+    ],
+    "contact_title": "Gerne im persönlichen Gespräch.",
+    "contact_text": "Ich möchte die Kunden der Finanz Informatik bei Fragen rund um das Vertriebscontrolling unterstützen. Technischen Support, Datenanalyse und Schulung bringe ich mit; die bankfachlichen Verfahren lerne ich gezielt hinzu.",
+    "meta_description": "Tamerlan Amirchanov · ConsultantBI · Bewerbung im Kundenservice Vertriebscontrolling BI-Tool bei der Finanz Informatik",
+    "poster_title": "Lösungen im Blick.",
+    "highlights": {
+      "experience": {
+        "label": "Daten & Prozesse",
+        "note": "Bachelorarbeit mit Kolloquium",
+        "bullets": [
+          "Note 1,0 bei Salzgitter Flachstahl",
+          "Logistische Daten & SAP R/3"
+        ]
+      },
+      "ai": {
+        "label": "KI-Weiterbildung",
+        "note": "Modul 4 · KI-Agenten & Workflows",
+        "bullets": [
+          "APIs, Datenaufbereitung & RAG",
+          "KI-Ergebnisse kritisch prüfen"
+        ]
+      },
+      "international": {
+        "suffix": " Länder",
+        "label": "Internationale Zusammenarbeit",
+        "note": "DACH, UK, Indien & Japan",
+        "bullets": [
+          "DACH vor Ort; UK, Indien & Japan remote",
+          "Englische Fachkommunikation"
+        ]
+      }
+    },
+    "room_name": "ConsultantBI"
+  },
+  "metrics": [
+    {
+      "value": 1,
+      "display_value": "1,0",
+      "suffix": "",
+      "label": "Bachelorarbeit mit Kolloquium",
+      "note": "Salzgitter Flachstahl GmbH",
+      "bullets": [
+        "Warenwirtschaft analysiert",
+        "Daten und Prozesse untersucht"
+      ]
+    },
+    {
+      "value": 500,
+      "suffix": " UE",
+      "label": "KI-Weiterbildung",
+      "note": "Modul 4 · KI-Agenten & Workflows",
+      "bullets": [
+        "APIs, Datenaufbereitung & RAG",
+        "Testing und Monitoring"
+      ]
+    },
+    {
+      "value": 6,
+      "suffix": " Länder",
+      "label": "Internationale Zusammenarbeit",
+      "note": "DACH, UK, Indien & Japan",
+      "bullets": [
+        "DACH vor Ort; UK, Indien & Japan remote",
+        "Fachkommunikation auf Englisch"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "start": "2026-08",
+      "end": "2026-10",
+      "organization": "Syntax Institut",
+      "title": "Weiterbildung Künstliche Intelligenz",
+      "role": "Modul 4 · KI-Agenten & Workflows",
+      "text": "500 Unterrichtseinheiten.",
+      "room_bullets": [
+        "APIs, Datenaufbereitung & RAG",
+        "KI-Ergebnisse kritisch prüfen"
+      ],
+      "bullets": [
+        "Modul 4: KI-Agenten und Workflows in Unternehmensprozessen; 500 Unterrichtseinheiten.",
+        "APIs und Datenaufbereitung; praktische RAG-Arbeit in der Weiterbildung.",
+        "A4Q AI Compliance / EU AI Act weiterhin in Vorbereitung."
+      ]
+    },
+    {
+      "start": "2021-01",
+      "end": "2026-07",
+      "organization": "WegscheidEntrenco GmbH",
+      "title": "Support, Datenanalyse & Wissenstransfer",
+      "role": "Remote Operation Service · Support & Dokumentation",
+      "text": "Technischer Kundenkontakt und internationale Zusammenarbeit im Remote Operation Service.",
+      "room_bullets": [
+        "Betriebsdaten & Ursachen analysiert",
+        "Kundenfragen verständlich geklärt",
+        "Dokumentation, Einarbeitung & Schulung"
+      ],
+      "bullets": [
+        "Betriebsdaten und Leistungsparameter überwacht; technische Störungen analysiert und an ihrer nachhaltigen Behebung mitgewirkt.",
+        "Wöchentliche Remote-Teammeetings zu Fehlerbehebungen und Optimierungen geleitet.",
+        "Technische Dokumentationen erstellt, Wartungs- und Reparaturarbeiten nachvollziehbar dokumentiert.",
+        "Erster Ansprechpartner für das Service-Asia-Team; neue und erfahrene Mitarbeitende eingearbeitet und geschult.",
+        "Kunden, technische Leitung und internationale Teams abgestimmt; Fachkommunikation überwiegend auf Englisch.",
+        "DACH-Inbetriebnahmen vor Ort, UK, Indien und Japan aus der Ferne unterstützt."
+      ]
+    },
+    {
+      "start": "2019-02",
+      "end": "2020-01",
+      "organization": "Salzgitter Flachstahl GmbH",
+      "title": "Datenanalyse & Prozessmodellierung",
+      "role": "Praxisphase & Bachelorarbeit · Reserveteilwirtschaft",
+      "text": "Logistische Daten ausgewertet und Prozessketten modelliert.",
+      "room_bullets": [
+        "Logistische Daten in SAP analysiert",
+        "Prozessketten modelliert",
+        "Warenwirtschaft untersucht"
+      ],
+      "bullets": [
+        "Logistische Daten erhoben und ausgewertet sowie Schwachstellen in der Reserveteilwirtschaft untersucht.",
+        "Prozessketten visualisiert und an Verbesserungen der Warenwirtschaft und Logistik mitgearbeitet.",
+        "SAP R/3 MM/WM für Bestände, Materialfluss und Aufträge eingesetzt; QM-Reklamationsprozess analysiert."
+      ]
+    },
+    {
+      "start": "2015-09",
+      "end": "2019-12",
+      "organization": "Ostfalia Hochschule für angewandte Wissenschaften",
+      "title": "B.Sc. Logistik- und Informationsmanagement",
+      "role": "Betriebswirtschaftliche Anwendungssysteme",
+      "text": "Logistische Prozesse und Informationsmanagement.",
+      "room_text": "Bachelorarbeit mit Kolloquium: Note 1,0. BWL-Anwendungssysteme und Ressourcenmanagement: jeweils 2,0.",
+      "bullets": [
+        "Schwerpunkte Ressourcenmanagement und Betriebswirtschaftliche Anwendungssysteme, jeweils Note 2,0.",
+        "Bachelorarbeit mit Kolloquium: Analyse der Warenwirtschaft der Salzgitter Flachstahl GmbH, Note 1,0."
+      ]
+    },
+    {
+      "start": "2014-12",
+      "end": "2018-02",
+      "organization": "LKY Wartungs- und Industrieservice GmbH",
+      "title": "Abläufe im operativen Team",
+      "role": "Lagerwirtschaft",
+      "text": "Praktische Logistikerfahrung im Lagerbetrieb.",
+      "room_bullets": [
+        "Wareneingang geprüft & kommissioniert",
+        "Lagerplätze im Team optimiert"
+      ],
+      "bullets": [
+        "Wareneingang geprüft, Aufträge kommissioniert und Lagerplätze im Team optimiert."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "title": "Kundenservice & Kommunikation",
+      "title_lines": [
+        "Kundenservice",
+        "& Kommunikation"
+      ],
+      "room_title": "Kundenservice",
+      "items": [
+        "Technische Anwenderfragen verstehen",
+        "Komplexe Sachverhalte verständlich erklären",
+        "Direkter Kundenkontakt",
+        "Internationale Abstimmung",
+        "Fachkommunikation auf Englisch"
+      ],
+      "room_items": [
+        "Anwenderfragen klären",
+        "Verständlich erklären",
+        "Internationale Abstimmung"
+      ]
+    },
+    {
+      "title": "Daten & Prozessanalyse",
+      "title_lines": [
+        "Daten",
+        "& Prozessanalyse"
+      ],
+      "room_title": "Datenanalyse",
+      "items": [
+        "Betriebsdaten auswerten und Ursachen analysieren",
+        "SAP R/3 MM/WM in der Logistik",
+        "Prozessmodellierung",
+        "MS Office: Excel, Word, PowerPoint, Outlook",
+        "Preis- und Margenkalkulation aus E-Commerce"
+      ],
+      "room_items": [
+        "Betriebsdaten auswerten",
+        "SAP: Logistikpraxis",
+        "Prozesse modellieren"
+      ]
+    },
+    {
+      "title": "Dokumentation & Schulung",
+      "title_lines": [
+        "Dokumentation",
+        "& Schulung"
+      ],
+      "room_title": "Wissenstransfer",
+      "items": [
+        "Technische Dokumentation und wiederkehrende Fälle aufbereiten",
+        "Neue Mitarbeitende einarbeiten",
+        "Erfahrene Mitarbeitende zu neuen Prozessen schulen",
+        "Wöchentliche Teammeetings leiten"
+      ],
+      "room_items": [
+        "Lösungen dokumentieren",
+        "Schulung & Einarbeitung",
+        "Wissen verständlich aufbereiten"
+      ]
+    },
+    {
+      "title": "KI & Datenworkflows",
+      "title_lines": [
+        "KI",
+        "& Datenworkflows"
+      ],
+      "room_title": "KI & Workflows",
+      "items": [
+        "API-Anbindung und Datenaufbereitung aus Weiterbildung/Projekt",
+        "RAG-Pipelines in der Weiterbildung",
+        "KI-Ergebnisse kritisch prüfen",
+        "Testing und Monitoring aus Weiterbildung",
+        "EU-AI-Act-Grundlagen; Zertifizierung in Vorbereitung"
+      ],
+      "room_items": [
+        "APIs, Daten & RAG",
+        "KI-Ergebnisse prüfen",
+        "Weiterbildung als Grundlage"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Deutsch",
+      "level": "Muttersprache / verhandlungssicher",
+      "room_level": "Muttersprache"
+    },
+    {
+      "name": "Englisch",
+      "level": "Sehr gut; verhandlungssicher im Berufsalltag",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Russisch",
+      "level": "Sehr gut",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Japanisch",
+      "level": "Anfänger",
+      "room_level": "Anfänger"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Kundenfragen geklärt",
+      "description": "Technische Sachverhalte im direkten Kundenkontakt und für das Service-Team Asien verständlich erklärt, überwiegend auf Englisch.",
+      "room_text": "Verständlich & lösungsorientiert"
+    },
+    {
+      "title": "Daten ausgewertet",
+      "description": "Betriebsdaten analysiert und technische Ursachen untersucht; logistische Daten in SAP bei Salzgitter Flachstahl ausgewertet.",
+      "room_text": "Betriebsdaten & Prozesse"
+    },
+    {
+      "title": "Wissen aufbereitet",
+      "description": "Wiederkehrende Fälle und Lösungen in technischen Dokumentationen nachvollziehbar aufbereitet.",
+      "room_text": "Dokumentation für Folgefälle"
+    },
+    {
+      "title": "Mitarbeitende geschult",
+      "description": "Neue Mitarbeitende eingearbeitet und erfahrene Mitarbeitende zu neuen Prozessen geschult.",
+      "room_text": "Einarbeitung & Schulung"
+    }
+  ]
+}
