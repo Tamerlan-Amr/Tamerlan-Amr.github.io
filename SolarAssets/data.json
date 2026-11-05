@@ -1,0 +1,304 @@
+{
+  "name": "Tamerlan Amirchanov",
+  "email": "t.amirchanova@gmail.com",
+  "availability": "ab sofort",
+  "languages": [
+    {
+      "name": "Deutsch",
+      "level": "Muttersprache / verhandlungssicher",
+      "room_level": "Muttersprache"
+    },
+    {
+      "name": "Englisch",
+      "level": "Sehr gut; verhandlungssicher im Berufsalltag",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Russisch",
+      "level": "Sehr gut",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Japanisch",
+      "level": "Anfänger",
+      "room_level": "Anfänger"
+    }
+  ],
+  "updated": "2026-11-05",
+  "content": {
+    "eyebrow": "BEWERBUNG · ASSET MANAGER PHOTOVOLTAIK · MARCLEY",
+    "monitor_eyebrow": "MARCLEY · ASSET MANAGER PHOTOVOLTAIK",
+    "headline": [
+      "Anlagen überwachen.",
+      "Störungen analysieren.",
+      "Inbetriebnahmen begleiten."
+    ],
+    "intro": "Im 24/7-Team habe ich Biomasse-BHKW aus der Ferne überwacht, Leistungsdaten ausgewertet, Störungen analysiert und Inbetriebnahmen begleitet.",
+    "availability": "Ab sofort verfügbar",
+    "today_title": "Anlagenleistung verstehen und den Betrieb verbessern.",
+    "today_text": [
+      "Bei Biomasse-BHKW habe ich an technischen Verbesserungen mitgewirkt und Maßnahmen mit der technischen Leitung abgestimmt. Aus der Reserveteilwirtschaft bringe ich Erfahrung in der Analyse von Abläufen und der Mitarbeit an Projekten zur Kostensenkung mit.",
+      "Bei MARCLEY möchte ich beides in den Betrieb von Solaranlagen für Mehrfamilienhäuser einbringen. In PV-Ertragskennzahlen wie die Performance Ratio und in das Einspeisemanagement arbeite ich mich gezielt ein."
+    ],
+    "strengths": [
+      {
+        "group": "technik",
+        "title": "Anlagenleistung im Blick.",
+        "text": "Betriebsdaten und Leistungsparameter aus der Ferne ausgewertet, um Abweichungen zu erkennen."
+      },
+      {
+        "group": "prozesse",
+        "title": "Störungen eingrenzen.",
+        "text": "Technische Ursachen untersucht, die Behebung unterstützt und Verbesserungen mit dem Team abgestimmt."
+      },
+      {
+        "group": "zusammenarbeit",
+        "title": "Inbetriebnahmen begleiten.",
+        "text": "Inbetriebnahmen vor Ort und aus der Ferne unterstützt und mich mit den technischen Teams abgestimmt."
+      }
+    ],
+    "contact_title": "Sprechen wir über Anlagenbetrieb.",
+    "contact_text": "Ich möchte bei MARCLEY meine Erfahrung mit Energieanlagen einbringen und mich in die Betriebsführung von Solaranlagen einarbeiten.",
+    "meta_description": "Tamerlan Amirchanov · SolarAssets · Bewerbung als Asset Manager Photovoltaik bei MARCLEY",
+    "poster_title": "Solarstrom vom Dach",
+    "room_name": "SolarAssets",
+    "room_hud": [
+      {
+        "title": "SolarAssets",
+        "text": "Mein Arbeitszimmer zur Bewerbung als Asset Manager Photovoltaik bei MARCLEY."
+      },
+      {
+        "title": "Energieanlagen im 24/7-Betrieb.",
+        "text": "Leistungsdaten auswerten, Störungen eingrenzen und Inbetriebnahmen begleiten."
+      },
+      {
+        "title": "Mein beruflicher Weg.",
+        "text": "Von der Reserveteilwirtschaft zur Betreuung von Biomasse-BHKW."
+      },
+      {
+        "title": "Studium & Weiterbildung.",
+        "text": "Logistik- und Informationsmanagement, ergänzt durch KI-Workflows und Monitoring."
+      },
+      {
+        "title": "Beiträge zum Anlagenbetrieb.",
+        "text": "Anlagen überwachen, Verbesserungen abstimmen und Arbeiten dokumentieren."
+      },
+      {
+        "title": "Was ich mitbringe.",
+        "text": "Anlagenbetrieb, Leistungsdaten, technische Berichte und Abstimmung im Team."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Ab sofort verfügbar. Ich freue mich auf ein Gespräch mit dem MARCLEY-Team."
+      }
+    ],
+    "media_credit": "Fensteransicht und Poster „Solarstrom vom Dach“ wurden für dieses persönliche Arbeitszimmer KI-gestützt gestaltet. Die Hannover-inspirierte Fensteransicht zeigt eine fiktive Dachlandschaft."
+  },
+  "metrics": [
+    {
+      "value": 24,
+      "display_value": "24/7",
+      "suffix": "",
+      "label": "Betreuung im Schichtteam",
+      "note": "Biomasse-Blockheizkraftwerke",
+      "bullets": [
+        "Fernüberwachung von Betriebsdaten",
+        "Technische Störungsanalyse"
+      ]
+    },
+    {
+      "value": 500,
+      "suffix": " UE",
+      "label": "KI-Weiterbildung",
+      "note": "Modul 4 · KI-Agenten & Workflows",
+      "bullets": [
+        "APIs und Datenaufbereitung",
+        "Monitoring und Alerting"
+      ]
+    },
+    {
+      "value": 6,
+      "suffix": " Länder",
+      "label": "Internationale Zusammenarbeit",
+      "note": "DACH, UK, Indien & Japan",
+      "bullets": [
+        "DACH vor Ort; UK, Indien & Japan remote",
+        "Fachkommunikation auf Englisch"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "start": "2026-08",
+      "end": "2026-10",
+      "organization": "Syntax Institut",
+      "title": "Weiterbildung Künstliche Intelligenz",
+      "role": "Modul 4 · KI-Agenten & Workflows",
+      "text": "500 Unterrichtseinheiten.",
+      "room_bullets": [
+        "APIs und Datenaufbereitung",
+        "Testing, Monitoring & Alerting"
+      ],
+      "bullets": [
+        "Modul 4: KI-Agenten und Workflows in Unternehmensprozessen, 500 Unterrichtseinheiten.",
+        "APIs, Datentransformation, Testing, Monitoring und Alerting."
+      ]
+    },
+    {
+      "start": "2021-01",
+      "end": "2026-07",
+      "organization": "WegscheidEntrenco GmbH",
+      "title": "Energieanlagen im 24/7-Betrieb",
+      "role": "Remote Operation Service · Support & Dokumentation",
+      "text": "Biomasse-Blockheizkraftwerke im internationalen 24/7-Team betreut.",
+      "room_bullets": [
+        "Leistungsdaten fernüberwacht",
+        "Störungen analysiert und Verbesserungen abgestimmt",
+        "Inbetriebnahmen vor Ort und remote begleitet",
+        "Wartung und Reparaturen dokumentiert"
+      ],
+      "bullets": [
+        "Betriebsdaten und Leistungsparameter im 24/7-Team aus der Ferne überwacht und ausgewertet.",
+        "Technische Störungen analysiert und an ihrer Behebung mitgewirkt. Teammeetings zu Fehlerbehebungen geleitet und Verbesserungen mit der technischen Leitung abgestimmt.",
+        "Inbetriebnahmen in der DACH-Region vor Ort, in Großbritannien, Indien und Japan remote begleitet.",
+        "Wartung und Reparaturen dokumentiert, technische Unterlagen gepflegt und Berichte und Protokolle zu Inbetriebnahmen erstellt."
+      ]
+    },
+    {
+      "start": "2019-02",
+      "end": "2020-01",
+      "organization": "Salzgitter Flachstahl GmbH",
+      "title": "Logistikdaten & Prozessanalyse",
+      "role": "Praxisphase & Bachelorarbeit · Reserveteilwirtschaft",
+      "text": "Warenwirtschaft und Abläufe in der Reserveteilwirtschaft untersucht.",
+      "room_bullets": [
+        "Logistikdaten ausgewertet",
+        "Prozessabläufe modelliert"
+      ],
+      "bullets": [
+        "Logistikdaten ausgewertet und an Projekten zur Effizienzsteigerung und Kostensenkung mitgewirkt.",
+        "SAP R/3 MM/WM in der Lager- und Materialwirtschaft eingesetzt."
+      ]
+    },
+    {
+      "start": "2015-09",
+      "end": "2019-12",
+      "organization": "Ostfalia Hochschule für angewandte Wissenschaften",
+      "title": "B.Sc. Logistik- und Informationsmanagement",
+      "role": "Betriebswirtschaftliche Anwendungssysteme",
+      "text": "Logistische Prozesse und Informationsmanagement.",
+      "room_text": "Bachelorarbeit mit Kolloquium: Note 1,0. BWL-Anwendungssysteme und Ressourcenmanagement: jeweils 2,0.",
+      "bullets": [
+        "Schwerpunkte Ressourcenmanagement und Betriebswirtschaftliche Anwendungssysteme, jeweils Note 2,0.",
+        "Bachelorarbeit mit Kolloquium: Analyse der Warenwirtschaft der Salzgitter Flachstahl GmbH, Note 1,0."
+      ]
+    },
+    {
+      "start": "2014-12",
+      "end": "2018-02",
+      "organization": "LKY Wartungs- und Industrieservice GmbH",
+      "title": "Abläufe im operativen Team",
+      "role": "Lagerwirtschaft",
+      "text": "Praktische Logistikerfahrung im Lagerbetrieb.",
+      "room_bullets": [
+        "Wareneingang geprüft & kommissioniert",
+        "Lagerplätze im Team optimiert"
+      ],
+      "bullets": [
+        "Wareneingang geprüft, Aufträge kommissioniert und Lagerplätze im Team optimiert."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Fernüberwachung",
+      "description": "Betriebsdaten und Leistungsparameter von Biomasse-BHKW im 24/7-Team überwacht.",
+      "room_text": "Betriebsdaten im 24/7-Team überwacht."
+    },
+    {
+      "title": "Störungsanalyse",
+      "description": "Ursachen untersucht, die Behebung unterstützt und technische Verbesserungen mit der technischen Leitung abgestimmt.",
+      "room_text": "Behebung unterstützt, Maßnahmen abgestimmt."
+    },
+    {
+      "title": "Inbetriebnahmen",
+      "description": "Inbetriebnahmen in DACH vor Ort, in UK, Indien und Japan aus der Ferne begleitet.",
+      "room_text": "DACH vor Ort, UK, Indien und Japan remote."
+    },
+    {
+      "title": "Berichte & Dokumentation",
+      "description": "Wartungs- und Reparaturarbeiten dokumentiert, Unterlagen gepflegt und Inbetriebnahmen in Berichten und Protokollen festgehalten.",
+      "room_text": "Arbeiten dokumentiert, Berichte erstellt."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Anlagenbetrieb",
+      "title_lines": [
+        "Anlagenbetrieb"
+      ],
+      "items": [
+        "Fernüberwachung",
+        "Technische Störungsanalyse",
+        "Inbetriebnahmen"
+      ],
+      "room_title": "Anlagenbetrieb",
+      "room_items": [
+        "Fernüberwachung",
+        "Störungsanalyse",
+        "Inbetriebnahmen"
+      ]
+    },
+    {
+      "title": "Daten & Prozesse",
+      "title_lines": [
+        "Daten & Prozesse"
+      ],
+      "items": [
+        "Auswertung von Betriebsdaten und Leistungsparametern",
+        "ERP-gestützte Datenauswertung",
+        "Prozessanalyse und Mitwirkung an Verbesserungen"
+      ],
+      "room_title": "Daten & Prozesse",
+      "room_items": [
+        "Leistungsdaten auswerten",
+        "ERP-Datenanalyse",
+        "Prozessanalyse"
+      ]
+    },
+    {
+      "title": "Dokumentation & Abstimmung",
+      "title_lines": [
+        "Dokumentation &",
+        "Abstimmung"
+      ],
+      "items": [
+        "Wartungs- und Reparaturdokumentation",
+        "Berichte und Protokolle zu Inbetriebnahmen",
+        "Teammeetings und Abstimmung mit der technischen Leitung"
+      ],
+      "room_title": "Dokumentation & Abstimmung",
+      "room_items": [
+        "Berichte & Protokolle",
+        "Wartung dokumentieren",
+        "Maßnahmen abstimmen"
+      ]
+    },
+    {
+      "title": "Automatisierung",
+      "title_lines": [
+        "Automatisierung"
+      ],
+      "items": [
+        "n8n und APIs",
+        "Datentransformation",
+        "Monitoring und Alerting in der Weiterbildung"
+      ],
+      "room_title": "Automatisierung",
+      "room_items": [
+        "n8n & APIs",
+        "Monitoring & Alerting"
+      ]
+    }
+  ]
+}
