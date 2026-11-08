@@ -1,0 +1,313 @@
+{
+  "name": "Tamerlan Amirchanov",
+  "email": "t.amirchanova@gmail.com",
+  "availability": "ab sofort",
+  "languages": [
+    {
+      "name": "Deutsch",
+      "level": "Muttersprache / verhandlungssicher",
+      "room_level": "Muttersprache"
+    },
+    {
+      "name": "Englisch",
+      "level": "Sehr gut; verhandlungssicher im Berufsalltag",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Russisch",
+      "level": "Sehr gut",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Japanisch",
+      "level": "Anfänger",
+      "room_level": "Anfänger"
+    }
+  ],
+  "updated": "2026-11-08",
+  "content": {
+    "eyebrow": "BEWERBUNG · (JUNIOR) PRODUCT OWNER ePROCUREMENT · ROSSMANN",
+    "monitor_eyebrow": "ROSSMANN · PRODUCT OWNER ePROCUREMENT",
+    "headline": [
+      "Fehler verstehen.",
+      "Wissen vermitteln.",
+      "Systeme verbessern."
+    ],
+    "intro": "Ich analysiere technische Fehler, dokumentiere Lösungen und schule Mitarbeitende. Diese Erfahrung möchte ich in die Betreuung der eProcurement-Plattform einbringen.",
+    "availability": "Ab sofort verfügbar",
+    "today_title": "Support und Prozesswissen für eProcurement.",
+    "today_text": [
+      "Im internationalen Anlagenservice habe ich technische Störungen eingegrenzt, die Behebung mit Service-Teams und technischer Leitung abgestimmt und technische Unterlagen gepflegt. Neue und erfahrene Mitarbeitende habe ich eingearbeitet und zu Prozessen geschult.",
+      "Bei ROSSMANN möchte ich diese Praxis mit meiner Erfahrung in ERP-Datenpflege und Warenwirtschaft verbinden: Anwenderfragen aufnehmen, Abläufe verständlich dokumentieren und Verbesserungsbedarf herausarbeiten. Das Testen von Workflows aus meiner KI-Weiterbildung ist eine Grundlage, um mich in die fachliche Prüfung von Plattform-Updates einzuarbeiten."
+    ],
+    "strengths": [
+      {
+        "group": "technik",
+        "title": "Fehler systematisch eingrenzen.",
+        "text": "Technische Ursachen analysiert, Lösungen mit den Beteiligten abgestimmt und die Behebung unterstützt."
+      },
+      {
+        "group": "prozesse",
+        "title": "Wissen nutzbar machen.",
+        "text": "Technische Dokumentationen erstellt und gepflegt sowie Informationen im ERP-System aufbereitet."
+      },
+      {
+        "group": "zusammenarbeit",
+        "title": "Mitarbeitende unterstützen.",
+        "text": "Neue Mitarbeitende eingearbeitet und erfahrene Mitarbeitende zu neuen Prozessen geschult."
+      }
+    ],
+    "contact_title": "Sprechen wir über eProcurement.",
+    "contact_text": "Ich möchte bei ROSSMANN Support, Dokumentation und Prozessverständnis in die Betreuung der Beschaffungsplattform einbringen.",
+    "meta_description": "Tamerlan Amirchanov · eProcurement · Bewerbung als (Junior) Product Owner bei ROSSMANN",
+    "poster_title": "ROSSMANN · Prozesse, die verbinden.",
+    "room_name": "eProcurement",
+    "room_hud": [
+      {
+        "title": "eProcurement",
+        "text": "Mein Arbeitszimmer zur Bewerbung als (Junior) Product Owner bei ROSSMANN."
+      },
+      {
+        "title": "Support trifft Prozesswissen.",
+        "text": "Fehler analysieren, Lösungen dokumentieren und Mitarbeitende schulen."
+      },
+      {
+        "title": "Mein beruflicher Weg.",
+        "text": "Technischer Support, ERP-Daten und Warenwirtschaft."
+      },
+      {
+        "title": "Studium & Weiterbildung.",
+        "text": "Logistik- und Informationsmanagement, ergänzt durch digitale Workflows und Tests."
+      },
+      {
+        "title": "Wissen in die Praxis bringen.",
+        "text": "Fehleranalyse, Dokumentation, Einarbeitung und fachliche Abstimmung."
+      },
+      {
+        "title": "Was ich mitbringe.",
+        "text": "Support, ERP-Prozesse, Schulung und digitale Workflows."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Ab sofort verfügbar. Ich freue mich auf ein Gespräch mit dem ROSSMANN-Team."
+      }
+    ],
+    "media_credit": "Fensteransicht: echtes Foto der ROSSMANN-Zentrale, Neubau in Burgwedel bei Hannover, aus der offiziellen Mediathek. © Dirk Rossmann GmbH. Für das Fenster oben ausgerichtet zugeschnitten und verkleinert; keine KI-Veränderung der Architektur. Poster „Prozesse, die verbinden.“: persönliche Bewerbungsgestaltung von Tamerlan Amirchanov mit dem originalen ROSSMANN-Logo der Dirk Rossmann GmbH.",
+    "media_sources": [
+      {
+        "label": "Foto und Bildrechte: ROSSMANN-Mediathek · Zentrale, Neubau Burgwedel",
+        "url": "https://unternehmen.rossmann.de/presse/mediathek.html"
+      },
+      {
+        "label": "Originalgrafik: offizieller ROSSMANN-SVG-Symbolsatz, Logo i-logo",
+        "url": "https://unternehmen.rossmann.de/typo3conf/ext/oyc_template/Resources/Public/Img/symbol-defs.svg"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "value": 1,
+      "display_value": "1,0",
+      "suffix": "",
+      "label": "Bachelorarbeit mit Kolloquium",
+      "note": "Warenwirtschaft bei Salzgitter Flachstahl",
+      "bullets": [
+        "Logistikdaten analysiert",
+        "Prozessketten modelliert"
+      ]
+    },
+    {
+      "value": 500,
+      "suffix": " UE",
+      "label": "KI-Weiterbildung",
+      "note": "Modul 4 · KI-Agenten & Workflows",
+      "bullets": [
+        "APIs und Datenaufbereitung",
+        "Workflows testen und dokumentieren"
+      ]
+    },
+    {
+      "value": 6,
+      "suffix": " Länder",
+      "label": "Internationale Zusammenarbeit",
+      "note": "DACH, UK, Indien & Japan",
+      "bullets": [
+        "DACH vor Ort; UK, Indien & Japan remote",
+        "Fachkommunikation auf Englisch"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "start": "2026-08",
+      "end": "2026-10",
+      "organization": "Syntax Institut",
+      "title": "Weiterbildung Künstliche Intelligenz",
+      "role": "Modul 4 · KI-Agenten & Workflows",
+      "text": "500 Unterrichtseinheiten.",
+      "room_bullets": [
+        "APIs & digitale Workflows",
+        "Testing & Dokumentation"
+      ],
+      "bullets": [
+        "Modul 4: KI-Agenten und Workflows in Unternehmensprozessen, 500 Unterrichtseinheiten.",
+        "Im Abschlussprojekt APIs angebunden, Daten aufbereitet und Fehlerbehandlung, Testfälle und Versionierung umgesetzt."
+      ]
+    },
+    {
+      "start": "2021-01",
+      "end": "2026-07",
+      "organization": "WegscheidEntrenco GmbH",
+      "title": "Support & Technische Dokumentation",
+      "role": "Internationaler Anlagenservice · 24/7-Team",
+      "text": "Technischen Support, Dokumentation und Wissenstransfer im internationalen Team verbunden.",
+      "room_bullets": [
+        "Technische Fehler analysiert",
+        "Dokumentation & ERP-Daten gepflegt",
+        "Mitarbeitende geschult"
+      ],
+      "bullets": [
+        "Technische Störungen analysiert und Lösungen mit Service-Teams, Kunden und technischer Leitung abgestimmt.",
+        "Technische Dokumentationen erstellt und gepflegt sowie Informationen und Datensätze im ERP-System aufbereitet.",
+        "Als erster Ansprechpartner für das Service-Team Asien neue Mitarbeitende eingearbeitet; erfahrene Mitarbeitende zu neuen Prozessen geschult.",
+        "Wöchentliche Remote-Teammeetings zu Optimierungen und Fehlerbehebungen geleitet; Fachkommunikation überwiegend auf Englisch."
+      ]
+    },
+    {
+      "start": "2019-02",
+      "end": "2020-01",
+      "organization": "Salzgitter Flachstahl GmbH",
+      "title": "Logistikdaten & Prozessanalyse",
+      "role": "Praxisphase & Bachelorarbeit · Reserveteilwirtschaft",
+      "text": "Warenwirtschaft und Abläufe in der Reserveteilwirtschaft untersucht.",
+      "room_bullets": [
+        "Warenwirtschaft & ERP-Prozesse",
+        "SAP R/3 MM/WM eingesetzt"
+      ],
+      "bullets": [
+        "Logistische Daten ausgewertet und Prozessketten modelliert. An Projekten zur Effizienzsteigerung und Kostensenkung mitgewirkt.",
+        "SAP R/3 MM/WM in Bestandsführung, Materialfluss und Auftragsabwicklung eingesetzt."
+      ]
+    },
+    {
+      "start": "2015-09",
+      "end": "2019-12",
+      "organization": "Ostfalia Hochschule für angewandte Wissenschaften",
+      "title": "B.Sc. Logistik- und Informationsmanagement",
+      "role": "Betriebswirtschaftliche Anwendungssysteme",
+      "text": "Logistische Prozesse und Informationsmanagement.",
+      "room_text": "Bachelorarbeit mit Kolloquium: Note 1,0. BWL-Anwendungssysteme und Ressourcenmanagement: jeweils 2,0.",
+      "bullets": [
+        "Schwerpunkte Ressourcenmanagement und Betriebswirtschaftliche Anwendungssysteme, jeweils Note 2,0.",
+        "Bachelorarbeit mit Kolloquium: Analyse der Warenwirtschaft der Salzgitter Flachstahl GmbH, Note 1,0."
+      ]
+    },
+    {
+      "start": "2014-12",
+      "end": "2018-02",
+      "organization": "LKY Wartungs- und Industrieservice GmbH",
+      "title": "Lagerwirtschaft",
+      "role": "Operative Logistik",
+      "text": "Praktische Logistikerfahrung im Lagerbetrieb.",
+      "room_bullets": [
+        "Wareneingang & Kommissionierung",
+        "Lagerplätze im Team optimiert"
+      ],
+      "bullets": [
+        "Wareneingang geprüft, Aufträge kommissioniert und Lagerplätze im Team optimiert."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Technische Fehleranalyse",
+      "description": "Technische Störungen eingegrenzt und die Behebung mit Service-Teams und technischer Leitung abgestimmt.",
+      "room_text": "Ursachen eingegrenzt, Lösungen abgestimmt."
+    },
+    {
+      "title": "Dokumentation & ERP-Daten",
+      "description": "Technische Unterlagen erstellt und gepflegt sowie Informationen im ERP-System aufbereitet.",
+      "room_text": "Unterlagen und ERP-Informationen gepflegt."
+    },
+    {
+      "title": "Einarbeitung & Schulung",
+      "description": "Neue Mitarbeitende eingearbeitet und erfahrene Mitarbeitende zu neuen Prozessen geschult.",
+      "room_text": "Prozesse verständlich vermittelt."
+    },
+    {
+      "title": "Workflows testen",
+      "description": "Im Abschlussprojekt der KI-Weiterbildung Workflows über APIs aufgebaut, Testfälle definiert und Fehlerbehandlung umgesetzt.",
+      "room_text": "Weiterbildung: APIs, Testfälle, Fehlerbehandlung."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Support & Schulung",
+      "title_lines": [
+        "Support & Schulung"
+      ],
+      "items": [
+        "Technische Fehleranalyse",
+        "Einarbeitung und Schulung",
+        "Technische Dokumentation"
+      ],
+      "room_title": "Support & Schulung",
+      "room_items": [
+        "Fehleranalyse",
+        "Dokumentation",
+        "Schulung"
+      ]
+    },
+    {
+      "title": "ERP & Prozesse",
+      "title_lines": [
+        "ERP & Prozesse"
+      ],
+      "items": [
+        "ERP-gestützte Datenpflege und -analyse",
+        "SAP R/3 MM/WM in der Logistik",
+        "Bestände und Materialflüsse"
+      ],
+      "room_title": "ERP & Prozesse",
+      "room_items": [
+        "ERP-Datenpflege",
+        "SAP R/3 MM/WM",
+        "Warenwirtschaft"
+      ]
+    },
+    {
+      "title": "Abstimmung",
+      "title_lines": [
+        "Abstimmung"
+      ],
+      "items": [
+        "Teammeetings moderieren",
+        "Zusammenarbeit mit Service-Teams und technischer Leitung",
+        "Fachkommunikation auf Englisch"
+      ],
+      "room_title": "Abstimmung",
+      "room_items": [
+        "Meetings moderieren",
+        "Technische Abstimmung",
+        "Englische Fachkommunikation"
+      ]
+    },
+    {
+      "title": "Digitale Workflows",
+      "title_lines": [
+        "Digitale Workflows"
+      ],
+      "items": [
+        "n8n und APIs",
+        "Fehlerbehandlung und Versionierung",
+        "Testing aus der Weiterbildung"
+      ],
+      "room_title": "Digitale Workflows",
+      "room_items": [
+        "n8n & APIs",
+        "Fehlerbehandlung",
+        "Testing · Weiterbildung"
+      ]
+    }
+  ]
+}

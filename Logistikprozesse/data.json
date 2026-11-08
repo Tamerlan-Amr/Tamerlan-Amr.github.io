@@ -1,0 +1,313 @@
+{
+  "name": "Tamerlan Amirchanov",
+  "email": "t.amirchanova@gmail.com",
+  "availability": "ab sofort",
+  "languages": [
+    {
+      "name": "Deutsch",
+      "level": "Muttersprache / verhandlungssicher",
+      "room_level": "Muttersprache"
+    },
+    {
+      "name": "Englisch",
+      "level": "Sehr gut; verhandlungssicher im Berufsalltag",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Russisch",
+      "level": "Sehr gut",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Japanisch",
+      "level": "Anfänger",
+      "room_level": "Anfänger"
+    }
+  ],
+  "updated": "2026-11-08",
+  "content": {
+    "eyebrow": "BEWERBUNG · (JUNIOR) PROJEKTMANAGER LOGISTIKPROZESSE · ROSSMANN",
+    "monitor_eyebrow": "ROSSMANN · PROJEKTMANAGER LOGISTIKPROZESSE",
+    "headline": [
+      "Abläufe verstehen.",
+      "Menschen verbinden.",
+      "Prozesse verbessern."
+    ],
+    "intro": "Ich bringe Lagerpraxis, logistische Datenanalyse und internationale Abstimmung zusammen. Bei ROSSMANN möchte ich damit fachübergreifende Logistikprozesse mitgestalten.",
+    "availability": "Ab sofort verfügbar",
+    "today_title": "Von der Lagerpraxis zum abgestimmten Soll-Prozess.",
+    "today_text": [
+      "Logistische Abläufe kenne ich aus der Lagerpraxis und aus der Reserveteilwirtschaft: Wareneingang und Kommissionierung, Datenanalyse und Prozessmodellierung. In meiner Bachelorarbeit habe ich aus der Ist-Analyse ein Soll-Konzept mit Handlungsempfehlungen entwickelt.",
+      "Im internationalen Anlagenservice habe ich Teammeetings geleitet und mich mit Service, technischer Leitung, Projektmanagement und Kunden abgestimmt. Diese Erfahrung möchte ich bei ROSSMANN einbringen, um Anforderungen zusammenzuführen und Verbesserungen an den Übergängen zwischen Fachbereichen mitzugestalten."
+    ],
+    "strengths": [
+      {
+        "group": "technik",
+        "title": "Abläufe nachvollziehen.",
+        "text": "Logistikdaten ausgewertet und Prozessketten in der Reserveteilwirtschaft modelliert."
+      },
+      {
+        "group": "prozesse",
+        "title": "Verbesserungen erarbeiten.",
+        "text": "Aus der Ist-Analyse ein Soll-Konzept abgeleitet und an Projekten zur Effizienzsteigerung mitgewirkt."
+      },
+      {
+        "group": "zusammenarbeit",
+        "title": "Beteiligte zusammenbringen.",
+        "text": "Teammeetings geleitet und technische Leitung, Service, Projektmanagement und Kunden bei der Umsetzung abgestimmt."
+      }
+    ],
+    "contact_title": "Sprechen wir über Logistikprozesse.",
+    "contact_text": "Ich möchte bei ROSSMANN meine Lagerpraxis, Prozessanalyse und Erfahrung in der Abstimmung zwischen Teams einbringen.",
+    "meta_description": "Tamerlan Amirchanov · Logistikprozesse · Bewerbung als (Junior) Projektmanager bei ROSSMANN",
+    "poster_title": "ROSSMANN · Prozesse, die verbinden.",
+    "room_name": "Logistikprozesse",
+    "room_hud": [
+      {
+        "title": "Logistikprozesse",
+        "text": "Mein Arbeitszimmer zur Bewerbung als (Junior) Projektmanager bei ROSSMANN."
+      },
+      {
+        "title": "Logistik über Schnittstellen hinweg.",
+        "text": "Abläufe analysieren, Anforderungen abstimmen und Verbesserungen mitgestalten."
+      },
+      {
+        "title": "Mein beruflicher Weg.",
+        "text": "Von Lagerpraxis und Reserveteilwirtschaft zur internationalen Abstimmung."
+      },
+      {
+        "title": "Studium & Weiterbildung.",
+        "text": "Logistik- und Informationsmanagement, ergänzt durch digitale Prozessunterstützung."
+      },
+      {
+        "title": "Verbesserungen gemeinsam erarbeiten.",
+        "text": "Prozessanalyse, Soll-Konzept, Teammeetings und praktische Logistik."
+      },
+      {
+        "title": "Was ich mitbringe.",
+        "text": "Logistik, Datenanalyse, Prozessmodellierung und Koordination."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Ab sofort verfügbar. Ich freue mich auf ein Gespräch mit dem ROSSMANN-Team."
+      }
+    ],
+    "media_credit": "Fensteransicht: echtes Foto der ROSSMANN-Zentrale, Neubau in Burgwedel bei Hannover, aus der offiziellen Mediathek. © Dirk Rossmann GmbH. Für das Fenster oben ausgerichtet zugeschnitten und verkleinert; keine KI-Veränderung der Architektur. Poster „Prozesse, die verbinden.“: persönliche Bewerbungsgestaltung von Tamerlan Amirchanov mit dem originalen ROSSMANN-Logo der Dirk Rossmann GmbH.",
+    "media_sources": [
+      {
+        "label": "Foto und Bildrechte: ROSSMANN-Mediathek · Zentrale, Neubau Burgwedel",
+        "url": "https://unternehmen.rossmann.de/presse/mediathek.html"
+      },
+      {
+        "label": "Originalgrafik: offizieller ROSSMANN-SVG-Symbolsatz, Logo i-logo",
+        "url": "https://unternehmen.rossmann.de/typo3conf/ext/oyc_template/Resources/Public/Img/symbol-defs.svg"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "value": 1,
+      "display_value": "1,0",
+      "suffix": "",
+      "label": "Bachelorarbeit mit Kolloquium",
+      "note": "Warenwirtschaft bei Salzgitter Flachstahl",
+      "bullets": [
+        "Logistikdaten analysiert",
+        "Prozessketten modelliert"
+      ]
+    },
+    {
+      "value": 500,
+      "suffix": " UE",
+      "label": "KI-Weiterbildung",
+      "note": "Modul 4 · KI-Agenten & Workflows",
+      "bullets": [
+        "APIs und Datenaufbereitung",
+        "Workflows testen und dokumentieren"
+      ]
+    },
+    {
+      "value": 6,
+      "suffix": " Länder",
+      "label": "Internationale Zusammenarbeit",
+      "note": "DACH, UK, Indien & Japan",
+      "bullets": [
+        "DACH vor Ort; UK, Indien & Japan remote",
+        "Fachkommunikation auf Englisch"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "start": "2026-08",
+      "end": "2026-10",
+      "organization": "Syntax Institut",
+      "title": "Weiterbildung Künstliche Intelligenz",
+      "role": "Modul 4 · KI-Agenten & Workflows",
+      "text": "500 Unterrichtseinheiten.",
+      "room_bullets": [
+        "APIs & digitale Workflows",
+        "Testing & Dokumentation"
+      ],
+      "bullets": [
+        "Modul 4: KI-Agenten und Workflows in Unternehmensprozessen, 500 Unterrichtseinheiten.",
+        "Im Abschlussprojekt APIs angebunden, Daten aufbereitet und Fehlerbehandlung, Testfälle und Versionierung umgesetzt."
+      ]
+    },
+    {
+      "start": "2021-01",
+      "end": "2026-07",
+      "organization": "WegscheidEntrenco GmbH",
+      "title": "Support & Technische Dokumentation",
+      "role": "Internationaler Anlagenservice · 24/7-Team",
+      "text": "Technische und organisatorische Verbesserungen im internationalen Team abgestimmt.",
+      "room_bullets": [
+        "Prozesse analysiert & verbessert",
+        "Teammeetings geleitet",
+        "Mit Service, Technik & Kunden abgestimmt"
+      ],
+      "bullets": [
+        "Technische und organisatorische Prozesse analysiert und verbessert; die Umsetzung von Projekten unterstützt.",
+        "Wöchentliche Remote-Teammeetings zu Optimierungen und Fehlerbehebungen geleitet und Maßnahmen mit der technischen Leitung abgestimmt.",
+        "An der Schnittstelle zwischen Service, technischer Leitung, Projektmanagement und Kunden gearbeitet. Neue und erfahrene Mitarbeitende eingearbeitet und geschult."
+      ]
+    },
+    {
+      "start": "2019-02",
+      "end": "2020-01",
+      "organization": "Salzgitter Flachstahl GmbH",
+      "title": "Logistikdaten & Prozessanalyse",
+      "role": "Praxisphase & Bachelorarbeit · Reserveteilwirtschaft",
+      "text": "Warenwirtschaft und Abläufe in der Reserveteilwirtschaft untersucht.",
+      "room_bullets": [
+        "Logistikdaten & Prozessketten analysiert",
+        "Soll-Konzept entwickelt"
+      ],
+      "bullets": [
+        "Logistische Daten ausgewertet und Prozessketten modelliert. An Projekten zur Effizienzsteigerung und Kostensenkung mitgewirkt.",
+        "Aus der Ist-Analyse ein Soll-Konzept mit Handlungsempfehlungen als Grundlage für ein Lastenheft entwickelt.",
+        "SAP R/3 MM/WM in Bestandsführung, Materialfluss und Auftragsabwicklung eingesetzt."
+      ]
+    },
+    {
+      "start": "2015-09",
+      "end": "2019-12",
+      "organization": "Ostfalia Hochschule für angewandte Wissenschaften",
+      "title": "B.Sc. Logistik- und Informationsmanagement",
+      "role": "Betriebswirtschaftliche Anwendungssysteme",
+      "text": "Logistische Prozesse und Informationsmanagement.",
+      "room_text": "Bachelorarbeit mit Kolloquium: Note 1,0. BWL-Anwendungssysteme und Ressourcenmanagement: jeweils 2,0.",
+      "bullets": [
+        "Schwerpunkte Ressourcenmanagement und Betriebswirtschaftliche Anwendungssysteme, jeweils Note 2,0.",
+        "Bachelorarbeit mit Kolloquium: Analyse der Warenwirtschaft der Salzgitter Flachstahl GmbH, Note 1,0."
+      ]
+    },
+    {
+      "start": "2014-12",
+      "end": "2018-02",
+      "organization": "LKY Wartungs- und Industrieservice GmbH",
+      "title": "Lagerwirtschaft",
+      "role": "Operative Logistik",
+      "text": "Praktische Logistikerfahrung im Lagerbetrieb.",
+      "room_bullets": [
+        "Wareneingang & Kommissionierung",
+        "Lagerplätze im Team optimiert"
+      ],
+      "bullets": [
+        "Wareneingang geprüft, Aufträge kommissioniert und Lagerplätze im Team optimiert."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Prozessanalyse",
+      "description": "Logistische Daten ausgewertet und Prozessketten in der Reserveteilwirtschaft modelliert.",
+      "room_text": "Daten ausgewertet, Abläufe modelliert."
+    },
+    {
+      "title": "Vom Ist zum Soll",
+      "description": "In der Bachelorarbeit aus der Ist-Analyse ein Soll-Konzept mit Handlungsempfehlungen entwickelt.",
+      "room_text": "Soll-Konzept aus der Analyse abgeleitet."
+    },
+    {
+      "title": "Abstimmung im Team",
+      "description": "Wöchentliche Remote-Teammeetings geleitet und die Umsetzung technischer Verbesserungen mit den Beteiligten abgestimmt.",
+      "room_text": "Meetings geleitet, Verbesserungen abgestimmt."
+    },
+    {
+      "title": "Praktische Logistik",
+      "description": "Wareneingang geprüft, Aufträge kommissioniert und Lagerplätze gemeinsam im Team optimiert.",
+      "room_text": "Wareneingang, Kommissionierung, Lagerplätze."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Logistik & Prozesse",
+      "title_lines": [
+        "Logistik & Prozesse"
+      ],
+      "items": [
+        "Warenwirtschaft und Lagerpraxis",
+        "Prozessketten modellieren",
+        "Ist-Analyse und Soll-Konzepte"
+      ],
+      "room_title": "Logistik & Prozesse",
+      "room_items": [
+        "Warenwirtschaft",
+        "Prozessketten",
+        "Ist-Analyse & Soll-Konzept"
+      ]
+    },
+    {
+      "title": "Daten & ERP",
+      "title_lines": [
+        "Daten & ERP"
+      ],
+      "items": [
+        "Logistische und ERP-gestützte Datenanalyse",
+        "SAP R/3 MM/WM",
+        "Excel, Word, PowerPoint und Outlook"
+      ],
+      "room_title": "Daten & ERP",
+      "room_items": [
+        "Logistikdaten auswerten",
+        "SAP R/3 MM/WM",
+        "MS Office"
+      ]
+    },
+    {
+      "title": "Abstimmung & Koordination",
+      "title_lines": [
+        "Abstimmung &",
+        "Koordination"
+      ],
+      "items": [
+        "Teammeetings moderieren",
+        "Technische Projektkoordination",
+        "Einarbeitung und internationale Zusammenarbeit"
+      ],
+      "room_title": "Abstimmung & Koordination",
+      "room_items": [
+        "Meetings moderieren",
+        "Maßnahmen abstimmen",
+        "Internationale Teams"
+      ]
+    },
+    {
+      "title": "Digitale Workflows",
+      "title_lines": [
+        "Digitale Workflows"
+      ],
+      "items": [
+        "n8n, APIs und Datentransformation",
+        "Workflows testen und dokumentieren in der Weiterbildung"
+      ],
+      "room_title": "Digitale Workflows",
+      "room_items": [
+        "n8n & APIs",
+        "Testing & Dokumentation",
+        "Praxis aus Weiterbildung"
+      ]
+    }
+  ]
+}
