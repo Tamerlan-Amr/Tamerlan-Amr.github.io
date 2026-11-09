@@ -1,0 +1,309 @@
+{
+  "name": "Tamerlan Amirchanov",
+  "email": "t.amirchanova@gmail.com",
+  "availability": "ab sofort",
+  "languages": [
+    {
+      "name": "Deutsch",
+      "level": "Muttersprache / verhandlungssicher",
+      "room_level": "Muttersprache"
+    },
+    {
+      "name": "Englisch",
+      "level": "Sehr gut; verhandlungssicher im Berufsalltag",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Russisch",
+      "level": "Sehr gut",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Japanisch",
+      "level": "Anfänger",
+      "room_level": "Anfänger"
+    }
+  ],
+  "updated": "2026-11-09",
+  "content": {
+    "eyebrow": "BEWERBUNG · TEILPROJEKTLEITER:IN / PROCESS OWNER:IN „PROCURE TO PAY“ · ENERCITY",
+    "monitor_eyebrow": "ENERCITY · PROCURE TO PAY",
+    "headline": [
+      "Abläufe verstehen.",
+      "Menschen verbinden.",
+      "Prozesse verbessern."
+    ],
+    "intro": "Ich analysiere Abläufe, bereite ERP-Daten auf und schule Mitarbeitende. Diese Erfahrung möchte ich bei enercity in die Weiterentwicklung des Procure-to-Pay-Prozesses einbringen.",
+    "availability": "Ab sofort verfügbar",
+    "today_title": "Prozesswissen für Procure to Pay.",
+    "today_text": [
+      "In der Reserveteilwirtschaft bei Salzgitter Flachstahl habe ich logistische Daten analysiert, Prozessketten modelliert und SAP R/3 MM/WM für Bestände, Materialfluss und Aufträge eingesetzt. Im technischen Anlagenservice habe ich Prozesse verbessert und ERP-Informationen gepflegt.",
+      "Bei enercity möchte ich dieses Prozessverständnis mit meiner Schulungs- und Abstimmungspraxis verbinden: Anforderungen verstehen, Fachbereiche einbeziehen und mich in Oracle Cloud sowie Procure to Pay einarbeiten."
+    ],
+    "strengths": [
+      {
+        "group": "prozesse",
+        "title": "Abläufe durchleuchten.",
+        "text": "Logistische Daten ausgewertet, Prozessketten modelliert und ein Soll-Konzept mit Handlungsempfehlungen erarbeitet."
+      },
+      {
+        "group": "technik",
+        "title": "Informationen nutzbar machen.",
+        "text": "ERP-Informationen gepflegt, Betriebsdaten überwacht und technische Abläufe nachvollziehbar dokumentiert."
+      },
+      {
+        "group": "zusammenarbeit",
+        "title": "Veränderung gemeinsam umsetzen.",
+        "text": "Mitarbeitende geschult, Teammeetings geleitet und Verbesserungen mit der technischen Leitung abgestimmt."
+      }
+    ],
+    "contact_title": "Sprechen wir über Procure to Pay.",
+    "contact_text": "Ich möchte Prozessanalyse, ERP-Verständnis und Wissenstransfer bei enercity einbringen.",
+    "meta_description": "Tamerlan Amirchanov · Bewerbung bei enercity · Teilprojektleiter:in / Process Owner:in „Procure to Pay“",
+    "poster_title": "Energie für bessere Prozesse.",
+    "room_name": "ProcureToPay",
+    "room_hud": [
+      {
+        "title": "ProcureToPay",
+        "text": "Mein Arbeitszimmer zur Bewerbung bei enercity · Teilprojektleiter:in / Process Owner:in „Procure to Pay“."
+      },
+      {
+        "title": "Prozesse gemeinsam verbessern.",
+        "text": "ERP-Verständnis, Schulung und fachliche Abstimmung."
+      },
+      {
+        "title": "Mein beruflicher Weg.",
+        "text": "Prozessanalyse, ERP-Daten und internationaler Anlagenservice."
+      },
+      {
+        "title": "Studium & Weiterbildung.",
+        "text": "Logistik- und Informationsmanagement und 500 UE KI-Weiterbildung."
+      },
+      {
+        "title": "Meine Beiträge.",
+        "text": "Daten auswerten, Abläufe verbessern und Wissen vermitteln."
+      },
+      {
+        "title": "Was ich mitbringe.",
+        "text": "Prozesse, ERP, Abstimmung und digitale Workflows."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Ab sofort verfügbar. Ich freue mich auf ein Gespräch mit dem enercity-Team."
+      }
+    ],
+    "media_credit": "Fensteransicht: echtes Foto „Die neue enercity-Konzernzentrale an der Glocksee.“ aus der offiziellen enercity-Mediathek, © enercity AG. Originale Abendaufnahme; Architektur nicht KI-verändert. Poster „Energie für bessere Prozesse.“: persönliche Bewerbungsgrafik von Tamerlan Amirchanov, keine offizielle enercity-Grafik und keine Darstellung interner Unternehmensdaten.",
+    "media_sources": [
+      {
+        "label": "Foto: offizielle enercity-Mediathek · Konzernzentrale",
+        "url": "https://www.enercity.de/presse/mediathek"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "value": 1,
+      "display_value": "1,0",
+      "suffix": "",
+      "label": "Bachelorarbeit mit Kolloquium",
+      "note": "Warenwirtschaft bei Salzgitter Flachstahl",
+      "bullets": [
+        "Logistikdaten analysiert",
+        "Prozessketten modelliert"
+      ]
+    },
+    {
+      "value": 500,
+      "suffix": " UE",
+      "label": "KI-Weiterbildung",
+      "note": "Modul 4 · KI-Agenten & Workflows",
+      "bullets": [
+        "APIs und Datenaufbereitung",
+        "Workflows testen und dokumentieren"
+      ]
+    },
+    {
+      "value": 6,
+      "suffix": " Länder",
+      "label": "Internationale Zusammenarbeit",
+      "note": "DACH, UK, Indien & Japan",
+      "bullets": [
+        "DACH vor Ort; UK, Indien & Japan remote",
+        "Fachkommunikation auf Englisch"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "start": "2026-08",
+      "end": "2026-10",
+      "organization": "Syntax Institut",
+      "title": "Weiterbildung Künstliche Intelligenz",
+      "role": "Modul 4 · KI-Agenten & Workflows",
+      "text": "500 Unterrichtseinheiten.",
+      "room_bullets": [
+        "APIs & Datenaufbereitung",
+        "Testing & Monitoring"
+      ],
+      "bullets": [
+        "Modul 4: KI-Agenten und Workflows in Unternehmensprozessen, 500 Unterrichtseinheiten.",
+        "Im Abschlussprojekt APIs angebunden, Daten aufbereitet und Fehlerbehandlung, Testfälle und Versionierung umgesetzt."
+      ]
+    },
+    {
+      "start": "2021-01",
+      "end": "2026-07",
+      "organization": "WegscheidEntrenco GmbH",
+      "title": "Prozesse, Daten & Wissenstransfer",
+      "role": "Internationaler Anlagenservice · 24/7-Team",
+      "text": "Technische und organisatorische Abläufe analysiert und Verbesserungen abgestimmt.",
+      "room_bullets": [
+        "Prozesse analysiert & optimiert",
+        "ERP-Daten & Dokumentation gepflegt",
+        "Mitarbeitende geschult"
+      ],
+      "bullets": [
+        "Technische und organisatorische Prozesse analysiert, Verbesserungspotenziale identifiziert und Maßnahmen mit der technischen Leitung abgestimmt.",
+        "Betriebsdaten und Leistungsparameter überwacht, technische Störungen analysiert und Informationen im ERP-System sowie in technischen Unterlagen gepflegt.",
+        "Service-Team Asien eingearbeitet und geschult; erfahrene Mitarbeitende am Standort Regensburg zu neuen Prozessen weitergebildet.",
+        "Wöchentliche Remote-Teammeetings im internationalen 24/7-Team geleitet und Projektmanagement bei der Umsetzung unterstützt; Fachkommunikation überwiegend auf Englisch."
+      ]
+    },
+    {
+      "start": "2019-02",
+      "end": "2020-01",
+      "organization": "Salzgitter Flachstahl GmbH",
+      "title": "Warenwirtschaft & Prozessanalyse",
+      "role": "Praxisphase & Bachelorarbeit · Reserveteilwirtschaft",
+      "text": "Warenwirtschaft und Abläufe in der Reserveteilwirtschaft untersucht.",
+      "room_bullets": [
+        "Daten & Prozessketten analysiert",
+        "SAP R/3 MM/WM eingesetzt"
+      ],
+      "bullets": [
+        "Logistische Daten ausgewertet und Prozessketten modelliert; an Projekten zur Effizienzsteigerung und Kostensenkung in der Reserveteilwirtschaft mitgewirkt.",
+        "SAP R/3 MM/WM für Bestandsführung, Materialfluss und Auftragsabwicklung eingesetzt; Ist-Analyse in ein Soll-Konzept mit Handlungsempfehlungen überführt."
+      ]
+    },
+    {
+      "start": "2015-09",
+      "end": "2019-12",
+      "organization": "Ostfalia Hochschule für angewandte Wissenschaften",
+      "title": "B.Sc. Logistik- und Informationsmanagement",
+      "role": "Betriebswirtschaftliche Anwendungssysteme",
+      "text": "Logistische Prozesse und Informationsmanagement.",
+      "room_text": "Bachelorarbeit mit Kolloquium: Note 1,0. BWL-Anwendungssysteme und Ressourcenmanagement: jeweils 2,0.",
+      "bullets": [
+        "Schwerpunkte Ressourcenmanagement und Betriebswirtschaftliche Anwendungssysteme, jeweils Note 2,0.",
+        "Bachelorarbeit mit Kolloquium: Analyse der Warenwirtschaft der Salzgitter Flachstahl GmbH, Note 1,0."
+      ]
+    },
+    {
+      "start": "2014-12",
+      "end": "2018-02",
+      "organization": "LKY Wartungs- und Industrieservice GmbH",
+      "title": "Lagerwirtschaft",
+      "role": "Operative Logistik",
+      "text": "Praktische Logistikerfahrung im Lagerbetrieb.",
+      "room_bullets": [
+        "Wareneingang & Kommissionierung",
+        "Lagerplätze im Team optimiert"
+      ],
+      "bullets": [
+        "Wareneingang geprüft, Aufträge kommissioniert und Lagerplätze im Team optimiert."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Prozesse analysieren",
+      "description": "Daten und Prozessketten in der Reserveteilwirtschaft untersucht und ein Soll-Konzept mit Handlungsempfehlungen erarbeitet.",
+      "room_text": "Daten, Prozessketten und Soll-Konzept."
+    },
+    {
+      "title": "ERP-Daten & Dokumentation",
+      "description": "Informationen im ERP-System und technische Unterlagen nachvollziehbar gepflegt.",
+      "room_text": "Informationen strukturiert aufbereitet."
+    },
+    {
+      "title": "Schulung & Abstimmung",
+      "description": "Mitarbeitende eingearbeitet und weitergebildet; Teammeetings und fachliche Abstimmung übernommen.",
+      "room_text": "Wissen vermitteln, Beteiligte einbeziehen."
+    },
+    {
+      "title": "Digitale Workflows",
+      "description": "Im Abschlussprojekt der KI-Weiterbildung APIs angebunden, Daten aufbereitet und Workflows mit Testfällen und Fehlerbehandlung umgesetzt.",
+      "room_text": "Weiterbildung: n8n, APIs und Tests."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Prozesse & Daten",
+      "title_lines": [
+        "Prozesse & Daten"
+      ],
+      "items": [
+        "Prozessanalyse und -modellierung",
+        "Datenauswertung und Soll-Konzepte",
+        "Wertstromanalyse"
+      ],
+      "room_title": "Prozesse & Daten",
+      "room_items": [
+        "Datenanalyse",
+        "Prozessketten",
+        "Soll-Konzepte"
+      ]
+    },
+    {
+      "title": "ERP & Warenwirtschaft",
+      "title_lines": [
+        "ERP & Warenwirtschaft"
+      ],
+      "items": [
+        "ERP-gestützte Datenpflege und -analyse",
+        "SAP R/3 MM/WM in der Logistik",
+        "Bestände und Materialflüsse"
+      ],
+      "room_title": "ERP & Warenwirtschaft",
+      "room_items": [
+        "ERP-Datenpflege",
+        "SAP R/3 MM/WM",
+        "Materialflüsse"
+      ]
+    },
+    {
+      "title": "Abstimmung & Schulung",
+      "title_lines": [
+        "Abstimmung & Schulung"
+      ],
+      "items": [
+        "Teammeetings leiten und Projekte koordinieren",
+        "Einarbeitung und Weiterbildung",
+        "Englische Fachkommunikation"
+      ],
+      "room_title": "Abstimmung & Schulung",
+      "room_items": [
+        "Teammeetings",
+        "Schulung",
+        "Englische Fachkommunikation"
+      ]
+    },
+    {
+      "title": "KI & Workflows",
+      "title_lines": [
+        "KI & Workflows"
+      ],
+      "items": [
+        "n8n, APIs und Datenaufbereitung",
+        "RAG und KI-Agenten aus der Weiterbildung",
+        "Testing, Monitoring und Fehlerbehandlung"
+      ],
+      "room_title": "KI & Workflows",
+      "room_items": [
+        "n8n & APIs",
+        "RAG · Weiterbildung",
+        "Testing & Monitoring"
+      ]
+    }
+  ]
+}
