@@ -2,7 +2,7 @@
   "name": "Tamerlan Amirchanov",
   "email": "t.amirchanova@gmail.com",
   "availability": "ab sofort",
-  "updated": "2026-10-18",
+  "updated": "2026-11-11",
   "content": {
     "eyebrow": "TECHNIK · PROZESSE · AUTOMATISIERUNG",
     "headline": [
@@ -39,7 +39,7 @@
     "highlights": {
       "experience": {
         "label": "Jahre in der Prozessoptimierung",
-        "note": "inklusive Werkstudentenzeit",
+        "note": "Internationaler Anlagenservice",
         "bullets": [
           "Technische Dokumentation & Prozessoptimierung",
           "Einarbeitung & Weiterbildung von Mitarbeitenden"
@@ -70,7 +70,7 @@
       "value": 5,
       "suffix": "+",
       "label": "Jahre in der Prozessoptimierung",
-      "note": "inklusive Werkstudentenzeit",
+      "note": "Internationaler Anlagenservice",
       "bullets": [
         "Technische Dokumentation & Prozessoptimierung",
         "Einarbeitung & Weiterbildung von Mitarbeitenden"
@@ -117,8 +117,6 @@
       ]
     },
     {
-      "start": "2021-01",
-      "end": "2026-07",
       "organization": "WegscheidEntrenco GmbH",
       "title": "Anlagenbetrieb aus der Ferne",
       "role": "Support & Technische Dokumentation",
