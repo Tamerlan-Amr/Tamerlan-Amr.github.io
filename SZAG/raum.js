@@ -230,11 +230,7 @@ export function createRoom(container, data, onSelect) {
     const drawCareer=(ctx)=>{
     let y=244;
     data.timeline.filter(item=>!item.organization.includes('Syntax')&&!item.organization.includes('Ostfalia')).forEach(item=>{
-      if(item.start&&item.end){
-        ctx.font='bold 32px Courier New';ctx.fillStyle='#284b3b';
-        ctx.fillText(item.start.slice(5)+'/'+item.start.slice(2,4)+' — '+item.end.slice(5)+'/'+item.end.slice(2,4),128,y);
-        y+=49;
-      }
+      ctx.font='bold 32px Courier New';ctx.fillStyle='#284b3b';ctx.fillText(item.start.slice(5)+'/'+item.start.slice(2,4)+' — '+item.end.slice(5)+'/'+item.end.slice(2,4),128,y);y+=49;
       ctx.fillStyle='#183127';ctx.font='bold 43px Arial';y=wrap(ctx,item.organization,128,y,w-200,53);
       ctx.font='600 32px Arial';y=wrap(ctx,item.role,128,y+7,w-200,40);
       ctx.font='500 42px Arial';
