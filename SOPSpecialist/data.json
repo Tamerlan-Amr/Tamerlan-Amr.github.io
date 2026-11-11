@@ -1,0 +1,315 @@
+{
+  "name": "Tamerlan Amirchanov",
+  "email": "t.amirchanova@gmail.com",
+  "availability": "ab sofort",
+  "languages": [
+    {
+      "name": "Deutsch",
+      "level": "Muttersprache / verhandlungssicher",
+      "room_level": "Muttersprache"
+    },
+    {
+      "name": "Englisch",
+      "level": "Sehr gut; verhandlungssicher im Berufsalltag",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Russisch",
+      "level": "Sehr gut",
+      "room_level": "Sehr gut"
+    },
+    {
+      "name": "Japanisch",
+      "level": "Anfänger",
+      "room_level": "Anfänger"
+    }
+  ],
+  "updated": "2026-11-11",
+  "content": {
+    "eyebrow": "BEWERBUNG · S&OP SPECIALIST (M/W/D) · GPV GERMANY",
+    "monitor_eyebrow": "GPV · S&OP SPECIALIST",
+    "headline": [
+      "Bestände im Blick.",
+      "Materialfluss verstehen.",
+      "Planung abstimmen."
+    ],
+    "intro": "Für GPV bringe ich Praxis in Bestandsführung, SAP und Datenanalyse mit. Damit möchte ich die Planung am Produktionsstandort Hildesheim unterstützen.",
+    "availability": "Ab sofort verfügbar",
+    "today_title": "Vom Materialfluss zur Produktionsplanung.",
+    "today_text": [
+      "In der Reserveteilwirtschaft habe ich Bestands- und Logistikdaten ausgewertet, Prozessketten modelliert und SAP für Bestandsführung, Materialfluss und Auftragsabwicklung eingesetzt. Aus der Ist-Analyse entstand ein Soll-Konzept mit konkreten Handlungsempfehlungen.",
+      "Bei GPV möchte ich Bedarfe, Kapazitäten und Bestände gemeinsam mit Vertrieb, Einkauf, Produktion und Logistik abstimmen. Aus dem Anlagenservice bringe ich die Erfahrung mit, Betriebsdaten auszuwerten, technische Probleme zu analysieren und Maßnahmen über Teams hinweg abzustimmen."
+    ],
+    "strengths": [
+      {
+        "group": "prozesse",
+        "title": "Bestände und Materialfluss",
+        "text": "SAP R/3 MM/WM eingesetzt und Warenbewegungen in der Reserveteilwirtschaft analysiert."
+      },
+      {
+        "group": "technik",
+        "title": "Daten für Entscheidungen",
+        "text": "Logistikdaten ausgewertet, Betriebsparameter überwacht und Ursachen technischer Störungen analysiert."
+      },
+      {
+        "group": "zusammenarbeit",
+        "title": "Bereichsübergreifende Abstimmung",
+        "text": "Teammeetings geleitet und Maßnahmen mit Service, technischer Leitung, Projektmanagement und Kunden abgestimmt."
+      }
+    ],
+    "contact_title": "Sprechen wir über die Planung bei GPV.",
+    "contact_text": "Ich wohne in Nordstemmen und bin ab sofort für die Stelle in Hildesheim verfügbar.",
+    "meta_description": "Tamerlan Amirchanov · Bewerbung als S&OP Specialist bei GPV Germany in Hildesheim",
+    "poster_title": "Lieferfähigkeit planen",
+    "room_name": "S&OP bei GPV",
+    "room_hud": [
+      {
+        "title": "Mein Arbeitszimmer für GPV",
+        "text": "Bewerbung als S&OP Specialist in Hildesheim."
+      },
+      {
+        "title": "Bestände und Materialfluss",
+        "text": "Logistikpraxis, SAP und Datenanalyse für die Produktionsplanung."
+      },
+      {
+        "title": "Mein beruflicher Weg",
+        "text": "Von der Lagerwirtschaft zur Reserveteilwirtschaft und zum internationalen Anlagenservice."
+      },
+      {
+        "title": "Studium und Weiterbildung",
+        "text": "Logistik- und Informationsmanagement, ergänzt durch digitale Workflows."
+      },
+      {
+        "title": "Beiträge aus der Praxis",
+        "text": "Warenwirtschaft analysiert, ein Soll-Konzept entwickelt und Maßnahmen abgestimmt."
+      },
+      {
+        "title": "Kenntnisse für die Planung",
+        "text": "SAP MM/WM, Excel, Prozessanalyse und englische Fachkommunikation."
+      },
+      {
+        "title": "Kontakt",
+        "text": "Ab sofort verfügbar. Ich freue mich auf ein Gespräch mit dem GPV-Team."
+      }
+    ],
+    "media_credit": "Fensterfoto: Lager bei GPV Electronics DE in Hildesheim, Foto von der offiziellen GPV-Standortseite. Für das Raumfenster wurde der Ausschnitt zugeschnitten. Poster „Lieferfähigkeit planen“: Gestaltung für die persönliche Bewerbung von Tamerlan Amirchanov.",
+    "media_sources": [
+      {
+        "label": "GPV-Standortseite · GPV Electronics DE",
+        "url": "https://gpv-group.com/de/standorte/deutschland/"
+      },
+      {
+        "label": "Originalfoto des Lagers · GPV",
+        "url": "https://gpv-group.com/wp-content/uploads/2022/04/E-DE_1776x1080.jpg"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "value": 1,
+      "display_value": "1,0",
+      "suffix": "",
+      "label": "Bachelorarbeit mit Kolloquium",
+      "note": "Warenwirtschaft bei Salzgitter Flachstahl",
+      "bullets": [
+        "Bestände und Materialfluss untersucht",
+        "Soll-Konzept entwickelt"
+      ]
+    },
+    {
+      "value": 500,
+      "suffix": " UE",
+      "label": "KI-Weiterbildung",
+      "note": "Modul 4 · KI-Agenten & Workflows",
+      "bullets": [
+        "APIs und Datenaufbereitung",
+        "Workflows testen und dokumentieren"
+      ]
+    },
+    {
+      "value": 6,
+      "suffix": " Länder",
+      "label": "Internationale Zusammenarbeit",
+      "note": "DACH, UK, Indien & Japan",
+      "bullets": [
+        "DACH vor Ort; UK, Indien & Japan remote",
+        "Fachkommunikation auf Englisch"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "start": "2026-08",
+      "end": "2026-10",
+      "organization": "Syntax Institut",
+      "title": "Weiterbildung Künstliche Intelligenz",
+      "role": "Modul 4 · KI-Agenten & Workflows",
+      "text": "500 Unterrichtseinheiten.",
+      "room_bullets": [
+        "APIs & digitale Workflows",
+        "Testing & Dokumentation"
+      ],
+      "bullets": [
+        "Modul 4: KI-Agenten und Workflows in Unternehmensprozessen, 500 Unterrichtseinheiten.",
+        "APIs, Datenaufbereitung, Testing, Monitoring und Alerting in der Weiterbildung vertieft."
+      ]
+    },
+    {
+      "start": "2021-01",
+      "end": "2026-07",
+      "organization": "WegscheidEntrenco GmbH",
+      "title": "Support & Technische Dokumentation",
+      "role": "Internationaler Anlagenservice · 24/7-Team",
+      "text": "Technische und organisatorische Verbesserungen im internationalen Team abgestimmt.",
+      "room_bullets": [
+        "Prozesse analysiert & verbessert",
+        "Teammeetings geleitet",
+        "Mit Service, Technik & Kunden abgestimmt"
+      ],
+      "bullets": [
+        "Technische und organisatorische Prozesse analysiert und verbessert; die Umsetzung von Projekten unterstützt.",
+        "Wöchentliche Remote-Teammeetings zu Optimierungen und Fehlerbehebungen geleitet und Maßnahmen mit der technischen Leitung abgestimmt.",
+        "An der Schnittstelle zwischen Service, technischer Leitung, Projektmanagement und Kunden gearbeitet. Neue und erfahrene Mitarbeitende eingearbeitet und geschult."
+      ]
+    },
+    {
+      "start": "2019-02",
+      "end": "2020-01",
+      "organization": "Salzgitter Flachstahl GmbH",
+      "title": "Bestandsführung und Materialfluss",
+      "role": "Praxisphase & Bachelorarbeit · Reserveteilwirtschaft",
+      "text": "Warenwirtschaft und Abläufe in der Reserveteilwirtschaft untersucht.",
+      "room_bullets": [
+        "SAP R/3 MM/WM eingesetzt",
+        "Bestände und Prozessketten analysiert"
+      ],
+      "bullets": [
+        "Logistische Daten ausgewertet und Prozessketten modelliert. An Projekten zur Effizienzsteigerung und Kostensenkung mitgewirkt.",
+        "Aus der Ist-Analyse ein Soll-Konzept mit Handlungsempfehlungen als Grundlage für ein Lastenheft entwickelt.",
+        "SAP R/3 MM/WM in Bestandsführung, Materialfluss und Auftragsabwicklung eingesetzt."
+      ]
+    },
+    {
+      "start": "2015-09",
+      "end": "2019-12",
+      "organization": "Ostfalia Hochschule für angewandte Wissenschaften",
+      "title": "B.Sc. Logistik- und Informationsmanagement",
+      "role": "Betriebswirtschaftliche Anwendungssysteme",
+      "text": "Logistische Prozesse und Informationsmanagement.",
+      "room_text": "Bachelorarbeit mit Kolloquium: Note 1,0. BWL-Anwendungssysteme und Ressourcenmanagement: jeweils 2,0.",
+      "bullets": [
+        "Schwerpunkte Ressourcenmanagement und Betriebswirtschaftliche Anwendungssysteme, jeweils Note 2,0.",
+        "Bachelorarbeit mit Kolloquium: Analyse der Warenwirtschaft der Salzgitter Flachstahl GmbH, Note 1,0."
+      ]
+    },
+    {
+      "start": "2014-12",
+      "end": "2018-02",
+      "organization": "LKY Wartungs- und Industrieservice GmbH",
+      "title": "Lagerwirtschaft",
+      "role": "Operative Logistik",
+      "text": "Praktische Logistikerfahrung im Lagerbetrieb.",
+      "room_bullets": [
+        "Wareneingang & Kommissionierung",
+        "Lagerplätze im Team optimiert"
+      ],
+      "bullets": [
+        "Wareneingang geprüft, Aufträge kommissioniert und Lagerplätze im Team optimiert."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "SAP in der Reserveteilwirtschaft",
+      "description": "SAP R/3 MM/WM für Bestandsführung, Materialfluss und Auftragsabwicklung eingesetzt.",
+      "room_text": "Bestände, Materialfluss und Auftragsdaten in SAP."
+    },
+    {
+      "title": "Vom Ist zum Soll",
+      "description": "In der Bachelorarbeit aus der Ist-Analyse ein Soll-Konzept mit Handlungsempfehlungen entwickelt.",
+      "room_text": "Soll-Konzept aus der Analyse abgeleitet."
+    },
+    {
+      "title": "Abstimmung im Team",
+      "description": "Wöchentliche Remote-Teammeetings geleitet und die Umsetzung technischer Verbesserungen mit den Beteiligten abgestimmt.",
+      "room_text": "Meetings geleitet, Verbesserungen abgestimmt."
+    },
+    {
+      "title": "Praktische Logistik",
+      "description": "Wareneingang geprüft, Aufträge kommissioniert und Lagerplätze gemeinsam im Team optimiert.",
+      "room_text": "Wareneingang, Kommissionierung, Lagerplätze."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Warenwirtschaft und Logistik",
+      "title_lines": [
+        "Warenwirtschaft",
+        "und Logistik"
+      ],
+      "items": [
+        "Bestandsführung",
+        "Materialflussplanung",
+        "Auftragsabwicklung",
+        "Lagerpraxis"
+      ],
+      "room_title": "Warenwirtschaft",
+      "room_items": [
+        "Bestände",
+        "Materialfluss",
+        "Auftragsabwicklung"
+      ]
+    },
+    {
+      "title": "Daten & ERP",
+      "title_lines": [
+        "Daten & ERP"
+      ],
+      "items": [
+        "Logistik- und Betriebsdaten auswerten",
+        "SAP R/3 MM/WM",
+        "Excel, Word, PowerPoint und Outlook"
+      ],
+      "room_title": "Daten & ERP",
+      "room_items": [
+        "Logistikdaten auswerten",
+        "SAP R/3 MM/WM",
+        "Excel"
+      ]
+    },
+    {
+      "title": "Abstimmung & Koordination",
+      "title_lines": [
+        "Abstimmung &",
+        "Koordination"
+      ],
+      "items": [
+        "Teammeetings moderieren",
+        "Technische Projektkoordination",
+        "Einarbeitung und internationale Zusammenarbeit"
+      ],
+      "room_title": "Abstimmung & Koordination",
+      "room_items": [
+        "Meetings moderieren",
+        "Maßnahmen abstimmen",
+        "Internationale Teams"
+      ]
+    },
+    {
+      "title": "Digitale Workflows",
+      "title_lines": [
+        "Digitale Workflows"
+      ],
+      "items": [
+        "n8n, APIs und Datentransformation",
+        "Workflows testen und dokumentieren in der Weiterbildung"
+      ],
+      "room_title": "Digitale Workflows",
+      "room_items": [
+        "n8n & APIs",
+        "Testing & Dokumentation",
+        "Praxis aus Weiterbildung"
+      ]
+    }
+  ]
+}
